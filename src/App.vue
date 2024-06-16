@@ -13,7 +13,7 @@ let toggleStatus = ref(false);
 
 <template>
 	<div id="TopNav"
-		class="fixed  flex items-center justify-between w-[100%] h-[74px] border-b border-b-[#32323D] px-30">
+		class="relative  flex items-center justify-between w-[100%] h-[74px] border-b border-b-[#32323D] px-30">
 		<div class="fixed  flex items-center justify-between w-[100%] h-[74px] border-b border-b-[#32323D] ">
 			<div class="flex ml-10 items-center ">
 				<RouterLink to="/">
@@ -55,12 +55,13 @@ let toggleStatus = ref(false);
 					<Bell :size="25" />
 				</div>
 
-				<button @click="toggleProfile = !toggleProfile" :class="toggleProfile ? 'bg-black' : 'bg-white'" class="rounded-full flex w-[100px] items-center gap-1 p-2 bg">
+				<button @click="toggleProfile = !toggleProfile" :class="toggleProfile ? 'bg-black' : 'bg-white'"
+					class="rounded-full flex w-[100px] items-center gap-1 p-2 bg">
 					<img width="25" class="rounded-full border "
 						src="https://yt3.ggpht.com/yti/ANjgQV-BsgP7VzRhrVOhoR9oluzj_l7hWizBLiYQpd6u703zSuU=s88-c-k-c0x00ffffff-no-rj"
 						alt="">
 					<RouterLink to="/profile">
-						<button  class=" absolute top-[30px] font-semibold text-[10px]">
+						<button class=" absolute top-[30px] font-semibold text-[10px]">
 							<div class="text-[#EC7063]" v-if="toggleStatus && toggleProfile">
 								LOGED
 							</div>
@@ -71,10 +72,11 @@ let toggleStatus = ref(false);
 					</RouterLink>
 				</button>
 
-				<span class="absolute z-20 text-center border w-[100px] py-3 px-4 right-10 bg-white top-[60px]" v-if="toggleProfile">
+				<span class="absolute z-50 text-center border w-[100px] py-3 px-4 right-10 bg-white top-[60px]"
+					v-if="toggleProfile">
 					<ul class="text-[14px] text-gray font-seminold">
 						<RouterLink to="/profile">
-						<li class="pb-1 border-b border-b-black">Profile</li>
+							<li class="pb-1 border-b border-b-black">Profile</li>
 						</RouterLink>
 						<li v-if="toggleStatus" @click="toggleStatus = !toggleStatus" class="mt-1 cursor-pointer">Sing In</li>
 						<li v-else @click="toggleStatus = !toggleStatus" class="mt-1 cursor-pointer">Log out</li>
@@ -85,7 +87,7 @@ let toggleStatus = ref(false);
 		</div>
 	</div>
 
-	<div class="fixed flex justify-between  w-[100%] mt-[74px] z-10 px-20">
+	<div class="fixed flex justify-between w-[100%] px-20 ">
 		<RouterView />
 	</div>
-</template>
+</template>-

@@ -3,7 +3,7 @@
 </script>
 
 <template>
-	<div id="Banner" class="banner">
+	<div id="Banner" class=" banner">
 		Hey there
 	</div>
 </template>
