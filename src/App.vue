@@ -13,10 +13,10 @@ let toggleStatus = ref(false);
 
 <template>
 	<div id="TopNav" class="relative   flex items-center justify-between w-[100%] h-[74px]  px-30">
-		<div class="fixed  bg-white flex items-center justify-between w-[100%] h-[74px]  ">
+		<div class="fixed  bg-[#F8F9F9] flex items-center justify-between w-[100%] h-[74px]  ">
 			<div class="flex ml-10 items-center ">
 				<RouterLink to="/">
-					<img width="170" src="/images/orcaShoes logo.png">
+					<img width="170"  src="/images/orcaShoes logo.png">
 				</RouterLink>
 
 				<div class="w-full">
@@ -55,8 +55,8 @@ let toggleStatus = ref(false);
 					<Bell :size="25" />
 				</div>
 
-				<button @click="toggleProfile = !toggleProfile" :class="toggleProfile ? 'bg-black' : 'bg-white'"
-					class="rounded-full flex w-[100px] bg-[#CCD1D1] bg-opacity-15 active:bg-opacity-90  hover:bg-[#CCD1D1] transition  hover:bg-opacity-50 items-center gap-1 p-2 bg">
+				<button @click="toggleProfile = !toggleProfile"  :class="toggleProfile ? 'bg-black' : 'bg-white' && !toggleStatus ? 'bg-white' : 'bg-black'"
+					class="rounded-full flex w-[100px] bg-[#CCD1D1]  active:bg-opacity-90  hover:bg-[#CCD1D1] transition  hover:bg-opacity-50 items-center gap-1 p-2 bg">
 					<img width="25" class="rounded-full border "
 						src="https://yt3.ggpht.com/yti/ANjgQV-BsgP7VzRhrVOhoR9oluzj_l7hWizBLiYQpd6u703zSuU=s88-c-k-c0x00ffffff-no-rj"
 						alt="">
@@ -66,7 +66,7 @@ let toggleStatus = ref(false);
 								<div v-if="!toggleProfile && !toggleStatus">
 									SINGED
 								</div>
-								<div v-if="!toggleProfile && toggleStatus">
+								<div class="text-white" v-if="!toggleProfile && toggleStatus">
 									LOGED
 								</div>
 								<div class="text-[#EC7063]" v-if="toggleStatus && toggleProfile">
