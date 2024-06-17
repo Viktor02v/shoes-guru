@@ -12,9 +12,8 @@ let toggleStatus = ref(false);
 </script>
 
 <template>
-	<div id="TopNav"
-		class="relative  flex items-center justify-between w-[100%] h-[74px] border-b border-b-[#32323D] px-30">
-		<div class="fixed  flex items-center justify-between w-[100%] h-[74px] border-b border-b-[#32323D] ">
+	<div id="TopNav" class="relative   flex items-center justify-between w-[100%] h-[74px]  px-30">
+		<div class="fixed  bg-white flex items-center justify-between w-[100%] h-[74px]  ">
 			<div class="flex ml-10 items-center ">
 				<RouterLink to="/">
 					<img width="170" src="/images/orcaShoes logo.png">
@@ -41,38 +40,47 @@ let toggleStatus = ref(false);
 				</ul>
 			</div>
 
-			<div class="flex items-center border rounded-full ">
-				<Magnify class=" pl-3" />
+			<div class="flex items-center  hover:bg-[#CCD1D1] transition hover:bg-opacity-15  border rounded-full ">
+				<Magnify class=" rounded-full bg-[#CCD1D1]  hover:bg-opacity-60 bg-opacity-10 transition hover:bg-[#CCD1D1] p-2" />
 				<input type="text" placeholder="Search..."
-					class="p-1 bg-transparent outline-none   font-[300] placeholder-[#BEBEC7] text-black w-full max-w-xl">
+					class="p-1 bg-transparent outline-none  font-[300] placeholder-[#BEBEC7] text-black  max-w-[200px]">
 			</div>
 
 			<div class="flex items-center mr-10 gap-5">
-				<div>
+				<div class="rounded-full p-2 hover:bg-[#CCD1D1] transition active:bg-opacity-100  hover:bg-opacity-25">
 					<HeartOutline :size="25" />
 				</div>
-				<div>
+				<div
+					class=" rounded-full p-1 hover:bg-[#CCD1D1] p-2 transition easy-in active:bg-opacity-100 hover:bg-opacity-25">
 					<Bell :size="25" />
 				</div>
 
 				<button @click="toggleProfile = !toggleProfile" :class="toggleProfile ? 'bg-black' : 'bg-white'"
-					class="rounded-full flex w-[100px] items-center gap-1 p-2 bg">
+					class="rounded-full flex w-[100px] bg-[#CCD1D1] bg-opacity-15 active:bg-opacity-90  hover:bg-[#CCD1D1] transition  hover:bg-opacity-50 items-center gap-1 p-2 bg">
 					<img width="25" class="rounded-full border "
 						src="https://yt3.ggpht.com/yti/ANjgQV-BsgP7VzRhrVOhoR9oluzj_l7hWizBLiYQpd6u703zSuU=s88-c-k-c0x00ffffff-no-rj"
 						alt="">
 					<RouterLink to="/profile">
 						<button class=" absolute top-[30px] font-semibold text-[10px]">
-							<div class="text-[#EC7063]" v-if="toggleStatus && toggleProfile">
-								LOGED
-							</div>
-							<div v-else-if="toggleProfile" class="text-[#ABEBC6]">
-								SINGED
+							<div class="pl-1">
+								<div v-if="!toggleProfile && !toggleStatus">
+									SINGED
+								</div>
+								<div v-if="!toggleProfile && toggleStatus">
+									LOGED
+								</div>
+								<div class="text-[#EC7063]" v-if="toggleStatus && toggleProfile">
+									LOGED
+								</div>
+								<div v-else-if="toggleProfile" class="text-[#58D68D]">
+									SINGED
+								</div>
 							</div>
 						</button>
 					</RouterLink>
 				</button>
 
-				<span class="absolute z-50 text-center border w-[100px] py-3 px-4 right-10 bg-white top-[60px]"
+				<span class="absolute z-10 text-center border w-[100px] py-3 px-4 right-10 bg-white top-[60px]"
 					v-if="toggleProfile">
 					<ul class="text-[14px] text-gray font-seminold">
 						<RouterLink to="/profile">
@@ -87,7 +95,7 @@ let toggleStatus = ref(false);
 		</div>
 	</div>
 
-	<div class="fixed flex justify-between w-[100%] px-20 ">
+	<div class="relative flex justify-between w-[100%] px-20 ">
 		<RouterView />
 	</div>
 </template>-
