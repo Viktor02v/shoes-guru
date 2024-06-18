@@ -3,7 +3,7 @@
 </script>
 
 <template>
-	<div id="Banner" class="fixed top-18 left-0 banner border-b border-gray-300">
+	<div id="Banner" class=" w-[1440px] banner border-b border-gray-300">
 	</div>
 </template>
 
@@ -16,7 +16,7 @@
 	color: transparent;
 	font-family: serif;
 	display: flex;
-	background-color: rgb(232, 229, 229);
+	background-color: rgb(243, 238, 238);
 	align-items: center;
 	justify-content: start;
 	font-size: 2.5rem;
@@ -30,7 +30,7 @@
 
 @keyframes move {
 	to {
-		text-shadow: -20ch 0 1px var(--clr), 0ch 0px 1px var(--clr), 20ch 0px 1px var(--clr),  40ch 0px 1px var(--clr), 60ch 0px 1px var(--clr);
+		text-shadow: -20ch 0 1px var(--clr), 0ch 0px 1px var(--clr), 20ch 0px 1px var(--clr), 40ch 0px 1px var(--clr), 60ch 0px 1px var(--clr);
 	}
 }
 </style>
