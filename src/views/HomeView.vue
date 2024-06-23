@@ -4,11 +4,13 @@ import { ref } from 'vue';
 import Banner from '@/components/Banner.vue';
 import NewLine from '@/components/NewLine.vue';
 import CardForVideo from '@/components/CardForVideo.vue';
+import CardForCollectionSection from '@/components/CardForCollectionSection.vue';
 
 import ChevronRight from 'vue-material-design-icons/ChevronRight.vue'
 import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue'
 
 let isHover = ref(false)
+
 </script>
 
 <template>
@@ -22,7 +24,7 @@ let isHover = ref(false)
 			</div>
 		</section>
 
-		<section id="addibleNavigation">
+		<section id="AddibleNavigation">
 			<div class=" flex flex-col items-center mb-20 ">
 				<img width="200" src="/images/swoosh-nike-logo.png">
 				<ul class="flex font-sans items-center text-xl  gap-12">
@@ -85,17 +87,18 @@ let isHover = ref(false)
 			</div>
 		</section>
 
-		<section id="videoPlay">
-			<div class="w-full mt-[-70px] mb-20 px-20">
+		<section id="VideoPlay">
+			<div class="w-full mt-[-70px] mb-40 px-20">
 				<div class="flex flex-col gap-2 items-center relative">
-					<div v-auto-animate class="relative" >
-						<video width="1200" src="/public/videos/Video for videoSection.mp4" class=" watch rounded-md z-0"
-							autoplay muted loop @mouseenter="isHover = true" @mouseleave="isHover = false">
+					<div class="relative">
+						<video width="1400" src="/videos/Video for videoSection.mp4" class=" watch rounded-md z-0" autoplay
+							muted loop @mouseenter="isHover = true" @mouseleave="isHover = false">
 						</video>
 
-						<div  v-if="isHover" class="absolute flex items-end gap-2 right-2 bottom-2" v-animate>
-							<CardForVideo imageUrl="/public/images/Air Jordan .png" />
-							<CardForVideo imageUrl="/public/images/swoosh-nike-logo.png" />
+						<div v-if="isHover" @mouseenter="isHover = true" @mouseleave="isHover = false"
+							class="absolute flex items-end gap-2 right-2 bottom-2">
+							<CardForVideo imageUrl="/images/Air Jordan .png" />
+							<CardForVideo imageUrl="/images/swoosh-nike-logo.png" />
 						</div>
 					</div>
 
@@ -112,5 +115,17 @@ let isHover = ref(false)
 				</div>
 			</div>
 		</section>
+
+		<section id="CollectionForFam">
+			<div class="px-20 mb-40 ">
+				<h3 class="font-extrabold mb-7 text-[25px] tracking-wide	 uppercase">Nike for the entire fam </h3>
+				<div class="flex items-center gap-2 w-full">
+					<CardForCollectionSection :type="'Nike Men'" imageUrl="/images/icons/For-men-collection.png" />
+					<CardForCollectionSection :type="'Nike Women'" imageUrl="/images/icons/For-women-collection.png" />
+					<CardForCollectionSection :type="'Nike Children'" imageUrl="/images/icons/For-children-collection.png" />
+				</div>
+			</div>
+		</section>
+
 	</div>
 </template>

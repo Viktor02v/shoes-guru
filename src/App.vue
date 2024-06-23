@@ -4,21 +4,24 @@ import { RouterView, RouterLink } from 'vue-router'
 import HeartOutline from 'vue-material-design-icons/HeartOutline.vue';
 import Bell from 'vue-material-design-icons/Bell.vue';
 import Magnify from 'vue-material-design-icons/Magnify.vue';
+import Cart from 'vue-material-design-icons/Cart.vue'
 
 
 let toggleProfile = ref(false);
 let toggleStatus = ref(false);
 let isHover = ref(false);
 
+
 </script>
 
 <template>
 	<header id="TopNav" @mouseenter="isHover = true" @mouseleave="isHover = false">
 		<div class="relative z-30 flex items-center justify-between w-[100%] h-[74px]">
-			<div :class="isHover ? 'bg-[#F1F1F1]  transition easy-in': 'bg-[#F4F6F6] transition easy-out'" class="fixed bg-[#F4F6F6] flex items-center  w-[100%] h-[74px] justify-between px-20">
+			<div :class="isHover ? 'bg-[#F1F1F1]  transition easy-in' : 'bg-[#F4F6F6] transition easy-out'"
+				class="fixed bg-[#F4F6F6] flex items-center  w-[100%] h-[74px] justify-between px-20">
 				<div class="flex items-center ">
 					<RouterLink to="/">
-						<img width="80" src="/public/images/Air Jordan .png">
+						<img width="80" src="/images/Air Jordan .png">
 					</RouterLink>
 
 					<div class="w-full ml-3">
@@ -52,13 +55,18 @@ let isHover = ref(false);
 				</div>
 
 				<div class="flex items-center gap-1">
-					<div class="rounded-full p-2 hover:bg-[#CCD1D1] transition active:bg-opacity-100  hover:bg-opacity-25">
-						<HeartOutline :size="25" />
-					</div>
-					<div
-						class=" rounded-full p-1 hover:bg-[#CCD1D1] p-2 transition easy-in active:bg-opacity-100 hover:bg-opacity-25">
-						<Bell :size="25" />
-					</div>
+					<RouterLink to="/favorites">
+						<div
+							class="rounded-full p-2 hover:bg-[#CCD1D1] transition active:bg-opacity-100  hover:bg-opacity-25">
+							<HeartOutline :size="25" />
+						</div>
+					</RouterLink>
+					<RouterLink to="/community">
+						<div
+							class=" rounded-full p-1 hover:bg-[#CCD1D1] p-2 transition easy-in active:bg-opacity-100 hover:bg-opacity-25">
+							<Bell :size="25" />
+						</div>
+					</RouterLink>
 
 					<button @click="toggleProfile = !toggleProfile"
 						:class="toggleProfile ? 'bg-black' : 'bg-white' && !toggleStatus ? 'bg-white' : 'bg-black'"
@@ -98,6 +106,12 @@ let isHover = ref(false);
 						</ul>
 					</span>
 
+					<RouterLink to="/cart">
+						<div
+							class="ml-3 rounded-full p-1 hover:bg-[#CCD1D1] p-2 transition easy-in active:bg-opacity-100 hover:bg-opacity-25">
+							<Cart />
+						</div>
+					</RouterLink>
 				</div>
 			</div>
 		</div>
