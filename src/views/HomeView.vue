@@ -5,6 +5,7 @@ import Banner from '@/components/Banner.vue';
 import NewLine from '@/components/NewLine.vue';
 import CardForVideo from '@/components/CardForVideo.vue';
 import CardForCollectionSection from '@/components/CardForCollectionSection.vue';
+import NikeCarousel from '@/components/NikeCarousel.vue';
 
 import ChevronRight from 'vue-material-design-icons/ChevronRight.vue'
 import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue'
@@ -120,12 +121,31 @@ let isHover = ref(false)
 			<div class="px-20 mb-40 ">
 				<h3 class="font-extrabold mb-7 text-[25px] tracking-wide	 uppercase">Nike for the entire fam </h3>
 				<div class="flex items-center gap-2 w-full">
-					<CardForCollectionSection :type="'Nike Men'" imageUrl="/images/icons/For-men-collection.png" />
-					<CardForCollectionSection :type="'Nike Women'" imageUrl="/images/icons/For-women-collection.png" />
-					<CardForCollectionSection :type="'Nike Children'" imageUrl="/images/icons/For-children-collection.png" />
+					<CardForCollectionSection :category="'Nike Men'" imageUrl="/images/icons/For-men-collection.png" />
+					<CardForCollectionSection :category="'Nike Women'" imageUrl="/images/icons/For-women-collection.png" />
+					<CardForCollectionSection :category="'Nike Children'"
+						imageUrl="/images/icons/For-children-collection.png" />
 				</div>
 			</div>
 		</section>
 
+		<section id="NikeCarousel">
+			<div class="mb-40 px-20">
+				<NikeCarousel :data="[
+					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan Mid' },
+					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan Easy' },
+					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan Low' },
+					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan 23' },
+					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Nike Zoom' },
+					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Nike Zoom-92' },
+					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Nike Pegasus-1s' },
+					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Nike & Jordan 1s' },
+					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan Retro-23' },
+					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan X-zero' },
+					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan Club23' },
+					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Nike && Ambush' },
+				]" />
+			</div>
+		</section>
 	</div>
 </template>
