@@ -5,7 +5,10 @@ import Banner from '@/components/Banner.vue';
 import NewLine from '@/components/NewLine.vue';
 import CardForVideo from '@/components/CardForVideo.vue';
 import CardForCollectionSection from '@/components/CardForCollectionSection.vue';
+import CardForExplore from '@/components/CardForExplore.vue';
 import NikeCarousel from '@/components/NikeCarousel.vue';
+import NikeCarouselWomen from '@/components/NikeCarouselWomen.vue';
+import NikeCarouselChild from '@/components/NikeCarouselChild.vue';
 
 import ChevronRight from 'vue-material-design-icons/ChevronRight.vue'
 import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue'
@@ -119,7 +122,7 @@ let isHover = ref(false)
 
 		<section id="CollectionForFam">
 			<div class="px-20 mb-40 ">
-				<h3 class="font-extrabold mb-7 text-[25px] tracking-wide	 uppercase">Nike for the entire fam </h3>
+				<h2 class="font-extrabold mb-7 text-[25px] tracking-wide	 uppercase">Nike for the entire fam </h2>
 				<div class="flex items-center gap-2 w-full">
 					<CardForCollectionSection :category="'Nike Men'" imageUrl="/images/icons/For-men-collection.png" />
 					<CardForCollectionSection :category="'Nike Women'" imageUrl="/images/icons/For-women-collection.png" />
@@ -130,21 +133,61 @@ let isHover = ref(false)
 		</section>
 
 		<section id="NikeCarousel">
-			<div class="mb-40 px-20">
-				<NikeCarousel :data="[
-					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan Mid' },
-					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan Easy' },
-					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan Low' },
-					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan 23' },
-					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Nike Zoom' },
-					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Nike Zoom-92' },
-					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Nike Pegasus-1s' },
-					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Nike & Jordan 1s' },
-					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan Retro-23' },
-					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan X-zero' },
-					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan Club23' },
-					{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Nike && Ambush' },
-				]" />
+			<div class="mb-40  px-20">
+				<div class="flex flex-col gap-[60px]">
+					<NikeCarousel :data="[
+						{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan Mid' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan Easy' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan Low' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan 23' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Nike Zoom' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Nike Zoom-92' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Nike Pegasus-1s' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Nike & Jordan 1s' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan Retro-23' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan X-zero' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Jordan Club23' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-men-carousel.png', category: 'Nike && Ambush' },
+					]" />
+					<NikeCarouselWomen :data="[
+						{ imgUrl: '/images/carousel/nike-shoes-for-women-carousel.png', category: 'Jordan Mid' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-women-carousel.png', category: 'Jordan Easy' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-women-carousel.png', category: 'Jordan Low' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-women-carousel.png', category: 'Jordan 23' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-women-carousel.png', category: 'Nike Zoom' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-women-carousel.png', category: 'Nike Zoom-92' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-women-carousel.png', category: 'Nike Pegasus-1s' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-women-carousel.png', category: 'Nike & Jordan 1s' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-women-carousel.png', category: 'Jordan Retro-23' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-women-carousel.png', category: 'Jordan X-zero' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-women-carousel.png', category: 'Jordan Club23' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-women-carousel.png', category: 'Nike && Ambush' },
+					]" />
+					<NikeCarouselChild :data="[
+						{ imgUrl: '/images/carousel/nike-shoes-for-children-carousel.png', category: 'Jordan Mid' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-children-carousel.png', category: 'Jordan Easy' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-children-carousel.png', category: 'Jordan Low' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-children-carousel.png', category: 'Jordan 23' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-children-carousel.png', category: 'Nike Zoom' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-children-carousel.png', category: 'Nike Zoom-92' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-children-carousel.png', category: 'Nike Pegasus-1s' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-children-carousel.png', category: 'Nike & Jordan 1s' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-children-carousel.png', category: 'Jordan Retro-23' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-children-carousel.png', category: 'Jordan X-zero' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-children-carousel.png', category: 'Jordan Club23' },
+						{ imgUrl: '/images/carousel/nike-shoes-for-children-carousel.png', category: 'Nike && Ambush' },
+					]" />
+				</div>
+			</div>
+		</section>
+
+		<section id="Explore&&Collections">
+			<div class="px-20 mb-40">
+				<h2  class="uppercase mb-[30px] text-center font-serif text-[40px] font-semibold">Explore For More</h2>
+				<div class="flex gap-5 w-full">
+					<CardForExplore imageUrl="/images/icons/For-men-collection.png" :title="something" />
+					<CardForExplore imageUrl="/images/icons/For-women-collection.png" :title="something" />
+				</div>
 			</div>
 		</section>
 	</div>

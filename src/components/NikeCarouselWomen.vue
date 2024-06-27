@@ -2,7 +2,7 @@
 import { toRefs, ref } from 'vue';
 import { RouterLink } from 'vue-router';
 
-import SliderItem from '@/components/SliderItem.vue';
+import SliderItemWomen from '@/components/SliderItemWomen.vue';
 
 import 'vue3-carousel/dist/carousel.css';
 import { Carousel, Slide } from 'vue3-carousel';
@@ -38,7 +38,7 @@ const slideTo = (val) => {
 	<div class="w-full">
 		<div class="flex justify-between items-center mb-4">
 
-			<h2 class="font-extrabold ml-1.5 text-[25px] uppercase">Nike && Jordan Essentials For Men</h2>
+			<h2 class="font-extrabold ml-1.5 text-[25px] uppercase">Nike && Jordan Essentials For Women</h2>
 
 			<div v-if="data.length > 0" class="flex items-center gap-3">
 				<button v-if="currentSlide !== 0" @click="slideTo(false)"
@@ -57,7 +57,7 @@ const slideTo = (val) => {
 			snapAlign="start">
 			<Slide v-for="slide in data" :key="slide" class="flex items-baseline">
 				<RouterLink to="/men">
-					<SliderItem :data="[
+					<SliderItemWomen :data="[
 						{ category: 'Jordan Mid' },
 						{ category: 'Jordan Easy' },
 						{ category: 'Jordan Low' },
