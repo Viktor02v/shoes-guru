@@ -15,11 +15,12 @@ import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue'
 
 let isHover = ref(false)
 
+let categorieHover = ref(false)
+
 </script>
 
 <template>
 	<div>
-
 		<section id="BannerSection">
 			<div>
 				<RouterLink to="/events">
@@ -183,10 +184,71 @@ let isHover = ref(false)
 
 		<section id="Explore&&Collections">
 			<div class="px-20 mb-40">
-				<h2  class="uppercase mb-[30px] text-center font-serif text-[40px] font-semibold">Explore For More</h2>
+				<h2 class="uppercase mb-[30px] text-center font-serif text-[40px] font-semibold">Explore For More</h2>
 				<div class="flex gap-5 w-full">
 					<CardForExplore imageUrl="/images/icons/For-men-collection.png" :title="something" />
 					<CardForExplore imageUrl="/images/icons/For-women-collection.png" :title="something" />
+				</div>
+			</div>
+		</section>
+
+		<section id="Categories">
+			<div class="flex flex-col w-full px-20 mb-20 ">
+				<div @mouseenter="categorieHover = true" @mouseleave="categorieHover = false"
+					class="mx-auto relative flex aligh-top  overflow-none  gap-[90px]">
+					<div class="">
+						<h3 class="font-extrabold mb-8 text-[20px] tracking-wide	 uppercase">Jordan Shoes</h3>
+						<ul class="flex flex-col  items-center">
+							<RouterLink to="Collections">
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan - "Italian Stallion"</li>
+								<li class="text-[16px] mb-4  font-semibold text-gray-400">Air Jordan - "Gotta Be the Shoes"</li>
+								<li class="text-[16px] mb-4  font-semibold text-gray-400">Air Jordan VIII - "Strap In"</li>
+								<li class="text-[16px] mb-4  font-semibold text-gray-400">Air Jordan IX - "Perfect Harmony"</li>
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan X - "The Legacy Continues"
+								</li>
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan X - "The Legacy Continues"
+								</li>
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan X - "The Legacy Continues"
+								</li>
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan X - "The Legacy Continues"
+								</li>
+							</RouterLink>
+						</ul>
+					</div>
+
+					<div class="">
+						<h3 class="font-extrabold mb-8 text-[20px] tracking-wide	 uppercase">Nike Shoes</h3>
+						<ul class="flex flex-col items-center">
+							<RouterLink to="Collections">
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Cortez Textile</li>
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike AirForce 1'07</li>
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike G.T Cut Cross</li>
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Wearallday</li>
+							</RouterLink>
+						</ul>
+					</div>
+
+					<div class="">
+						<h3 class="font-extrabold mb-8 text-[20px] tracking-wide	 uppercase">Callab Jordan <span
+								class="text-[25px]"> && </span>Nike Shoes</h3>
+						<ul class="flex flex-col items-center">
+							<RouterLink to="Collections">
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Dunk Low Retro</li>
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Dunk Low Retro</li>
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Dunk Low Retro</li>
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Dunk Low Retro</li>
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan 1 Mid</li>
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan 1 Low "White Toe"</li>
+								<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan 6 Retro "Cool Grey"</li>
+								<li class="text-[16px] font-semibold text-gray-400">Air Jordan 2 Retro OG "Chicago"
+								</li>
+							</RouterLink>
+						</ul>
+					</div>
+				</div>
+				<div @mouseenter="categorieHover = true" @mouseleave="categorieHover = false" :class="categorieHover ? 'translate-y-[250px] transition duration-200' : 'transition duration-200'" class="absolute z-20 bottom-20 w-[1280px]  h-[200px] bg-white">
+					<div @mouseenter="categorieHover = true" @mouseleave="categorieHover = false"  class="w-full mt-10 border-b">
+					</div>
 				</div>
 			</div>
 		</section>

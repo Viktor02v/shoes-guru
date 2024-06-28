@@ -15,6 +15,7 @@ let isHover = ref(false);
 </script>
 
 <template>
+	<div class="flex flex-col my-auto">
 	<header id="TopNav" @mouseenter="isHover = true" @mouseleave="isHover = false">
 		<div class="relative z-30 flex items-center justify-between w-[100%] h-[74px]">
 			<div :class="isHover ? 'bg-[#F1F1F1]  transition easy-in' : 'bg-[#F4F6F6] transition easy-out'"
@@ -123,4 +124,10 @@ let isHover = ref(false);
 		</div>
 	</main>
 
+	<footer>
+		<div class="absolute z-30">
+			
+		</div>
+	</footer>
+</div>
 </template>
