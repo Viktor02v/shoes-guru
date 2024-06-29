@@ -246,7 +246,7 @@ let categorieHover = ref(false)
 						</ul>
 					</div>
 				</div>
-				<div @mouseenter="categorieHover = true" @mouseleave="categorieHover = false" :class="categorieHover ? 'translate-y-[250px] transition duration-200' : 'transition duration-200'" class="absolute z-20 bottom-20 w-[1280px]  h-[200px] bg-white">
+				<div @mouseenter="categorieHover = true" @mouseleave="categorieHover = false" :class="categorieHover ? 'translate-y-[200px] transition duration-200' : 'transition duration-200'" class="absolute z-20 bottom-20 w-[1280px]  h-[200px] bg-white">
 					<div @mouseenter="categorieHover = true" @mouseleave="categorieHover = false"  class="w-full mt-10 border-b">
 					</div>
 				</div>
