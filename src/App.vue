@@ -121,7 +121,7 @@ let isHover = ref(false);
 		</header>
 
 		<main>
-			<div class="relative flex justify-between ">
+			<div class="relative flex flex-col ">
 				<RouterView />
 			</div>
 		</main>

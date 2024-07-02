@@ -29,7 +29,7 @@ let categorieHover = ref(false)
 			</div>
 		</section>
 
-		<section id="AddibleNavigation">
+		<section id="addibleNavigation">
 			<div class=" flex flex-col items-center mb-20 ">
 				<img width="200" src="/images/swoosh-nike-logo.png">
 				<ul class="flex font-sans items-center text-xl  gap-12">
@@ -55,7 +55,7 @@ let categorieHover = ref(false)
 							For Children
 						</li>
 					</RouterLink>
-					<RouterLink to="/profile">
+					<RouterLink to="/help">
 						<li class="font-semibold text-md border-l border-l-[#32323D] pl-[35px] cursor-pointer ">
 							Help
 						</li>
