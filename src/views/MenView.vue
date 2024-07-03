@@ -42,7 +42,7 @@ let isHoveredForNews = ref(false)
 
 					<img
 						:class="isHovered ? 'translate-x-[-540px] translate-y-[-30px] transition duration-300' : 'translate-x-[300px] translate-y-[-200px] transition duration-300'"
-						width="200" class=" mb-10 translate-x-[300px] z-20" src="/images/Air Jordan .png">
+						width="200" class=" mb-10 translate-x-[300px] z-20" src="/public/images/Air Jordan .png">
 				</div>
 
 				<ul class="flex font-sans z-20 items-center text-mb  gap-9">
