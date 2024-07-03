@@ -12,7 +12,8 @@ let isHoveredForNews = ref(false)
 
 
 	<section id="navigationForMen">
-		<div class="absolute px-[683px]  flex center z-30 hover:bg-opacity-100   bg-opacity-20 bg-gradient-to-r from-gray-100 to-gray-300 bg-gray-200">
+		<div
+			class="absolute px-[683px] flex center z-30 hover:bg-opacity-100  bg-opacity-20 bg-gradient-to-r from-gray-100 to-gray-300 bg-gray-200">
 			<RouterLink to="/">
 				<button class="flex items-center align-center p-2">
 					<ChevronRight size="20" />
@@ -20,7 +21,7 @@ let isHoveredForNews = ref(false)
 				</button>
 			</RouterLink>
 
-		
+
 		</div>
 
 		<div class="w-[1440px] overflow-hidden">
@@ -41,8 +42,8 @@ let isHoveredForNews = ref(false)
 					</div>
 
 					<img
-						:class="isHovered ? 'translate-x-[-540px] translate-y-[-30px] transition duration-300' : 'translate-x-[300px] translate-y-[-200px] transition duration-300'"
-						width="200" class=" mb-10 translate-x-[300px] z-20" src="/public/images/Air Jordan .png">
+						:class="isHovered ? 'translate-x-[-539px] translate-y-[-30px] transition duration-300' : 'translate-x-[300px] translate-y-[-200px] transition duration-300'"
+						width="200" class=" mb-10 translate-x-[0px] z-30" src="/images/Air Jordan .png">
 				</div>
 
 				<ul class="flex font-sans z-20 items-center text-mb  gap-9">
