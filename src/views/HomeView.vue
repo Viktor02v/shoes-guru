@@ -125,9 +125,9 @@ let categorieHover = ref(false)
 			<div class="px-20 mb-40 ">
 				<h2 class="font-extrabold mb-7 text-[25px] tracking-wide	 uppercase">Nike for the entire fam </h2>
 				<div class="flex items-center gap-2 w-full">
-					<CardForCollectionSection :category="'Nike Men'" imageUrl="/images/icons/For-men-collection.png" />
-					<CardForCollectionSection :category="'Nike Women'" imageUrl="/images/icons/For-women-collection.png" />
-					<CardForCollectionSection :category="'Nike Children'"
+					<CardForCollectionSection class="hover:translate-y-[-20px] transition"  :category="'Nike Men'" imageUrl="/images/icons/For-men-collection.png" />
+					<CardForCollectionSection class="hover:translate-y-[-20px] transition" :category="'Nike Women'" imageUrl="/images/icons/For-women-collection.png" />
+					<CardForCollectionSection class="hover:translate-y-[-20px] transition"  :category="'Nike Children'"
 						imageUrl="/images/icons/For-children-collection.png" />
 				</div>
 			</div>

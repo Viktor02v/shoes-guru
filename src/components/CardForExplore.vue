@@ -14,9 +14,9 @@ let isHovered = ref(false)
 		<img @mouseenter="isHovered = true" @mouseleave="isHovered= false" :class="isHovered ? 'contrast-50 transition easy-in duration-200': 'contrast-100 transition easy-out duration-200'" class="relative rounded-md" :src="imageUrl">
 		<span @mouseenter="isHovered = true" @mouseleave="isHovered= false" v-if="isHovered"  class="absolute top-[20%] left-[50%] font-semibold text-2xl text-white">Your text</span>
 		<RouterLink to="collections">
-			<button  @mouseenter="isHovered = true" @mouseleave="isHovered= false"
-			:class="isHovered ? 'bg-white text-[#000000] transition easy-in duration-200':'transition easy-out duration-200'"
-				class="absolute bottom-10 z-20 left-[40%]  rounded-full cursor-pointer transition easy-in duration-150 py-3 px-8 bg-transparent border hover:bg-white hover:text-black font-semibold text-[14px] text-white">
+			<button @mouseenter="isHovered = true" @mouseleave="isHovered= false"
+			:class="isHovered ? 'bg-white text-black transition easy-in duration-200':'transition text-white easy-out  duration-200'"
+				class="absolute bottom-10 z-20 left-[40%]  rounded-full cursor-pointer transition easy-in duration-150 py-3 px-8 bg-transparent border font-semibold text-[14px]">
 				Shop
 			</button>
 			</RouterLink>

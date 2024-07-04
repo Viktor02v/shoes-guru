@@ -2,19 +2,21 @@
 import { RouterLink } from 'vue-router';
 import { ref } from 'vue'
 import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue';
-import ChevronRight from 'vue-material-design-icons/ChevronLeft.vue';
+import ChevronRight from 'vue-material-design-icons/ChevronRight.vue';
 
 let isHovered = ref(false)
 let isHoveredForNews = ref(false)
+let isHoveredForExplore = ref(false)
+let isHoveredForExploreFirstCard = ref(false)
+let isHoveredForExploreSecondCard = ref(false)
 </script>
 
 <template>
 
-
 	<section id="navigationForMen">
 		<div class="relative w-[1440px] h-[100%]">
 			<div
-				class="sticky top-0 px-[683px] flex center z-30 hover:bg-opacity-100  bg-opacity-20 bg-gradient-to-r from-gray-100 to-gray-300 bg-gray-200">
+				class="sticky top-0 px-[683px] flex center z-30 hover:bg-opacity-100 transition  bg-opacity-20 bg-gradient-to-l from-white-100 to-gray-900 bg-gray-200">
 				<RouterLink to="/">
 					<button class="flex items-center align-center p-2">
 						<ChevronRight size="20" />
@@ -82,7 +84,7 @@ let isHoveredForNews = ref(false)
 	</section>
 
 	<section id="news">
-		<div class="mx-20 mb-20">
+		<div class="mx-20 mb-40">
 			<div class="flex items-ceter gap-10 flex-col" @mouseenter="isHoveredForNews = true"
 				@mouseleave="isHoveredForNews = false">
 				<div :class="isHoveredForNews ? 'shadow-inner shadow-2xl' : ''"
@@ -107,7 +109,53 @@ let isHoveredForNews = ref(false)
 						</RouterLink>
 					</div>
 				</RouterLink>
+			</div>
+		</div>
+	</section>
 
+	<section id="explore-sport">
+		<div class="flex flex-col gap-7 px-20 mb-40">
+			<h2 class="font-extrabold text-[25px] uppercase">Explore Sport</h2>
+			<div class=" w-full overflow-hidden">
+				<div class="relative flex flex-col w-[1280px] h-[940px]">
+					<div class=" flex absolute left-0 gap-10 z-20 top-0  w-1/2 flex-col items-center"
+						@mouseenter="isHoveredForExploreFirstCard = true" @mouseleave="isHoveredForExploreFirstCard = false">
+						<img src="/images/icons/Basketball-for-explore-sport.png">
+						<button :class="isHoveredForExploreFirstCard ? ' bg-white opacity-100' : 'opacity-30'"
+							class="absolute  bottom-10 rounded-full mt-[20px] transition easy-in duration-150  font-semibold text-[14px] py-2 px-6 border bg-transparent text-black">
+							Shop
+						</button>
+					</div>
+
+					<div class=" flex absolute right-0 z-20 top-0 gap-10  w-1/2 h-1/1   flex-col items-center"
+						@mouseenter="isHoveredForExploreSecondCard = true"
+						@mouseleave="isHoveredForExploreSecondCard = false">
+						<img src="/images/icons/Soccer-for-explore-sport.png">
+						<button :class="isHoveredForExploreSecondCard ? ' bg-white opacity-100' : 'opacity-30'"
+							class="absolute bottom-10 rounded-full  mt-[20px] transition easy-in duration-150 font-semibold text-[14px] py-2 px-6 border bg-transparent text-black">
+							Shop
+						</button>
+					</div>
+
+					<div
+						class="relative bg-opacity-20 hover:bg-opacity-100 transition bg-gradient-to-r from-red-900 to-blue-900 z-10 w-full mt-[638px] h-[100px]">
+						<div :class="isHoveredForExplore ? 'translate-x-[5px]' : ''"
+							class="flex flex-col overflow-hidden  transition font-serif text-[20px] w-full text-white mt-[36px] items-center"
+							@mouseenter="isHoveredForExplore = true" @mouseleave="isHoveredForExplore = false">
+							<div class="flex items-center">
+								<h3>Explore for more</h3>
+								<ChevronRight :class="isHoveredForExplore ? 'translate-x-[5px]' : ''" />
+								<RouterLink to="/collections">
+									<div :class="isHoveredForExplore ? 'translate-x-[5px]' : ''" href="">Go</div>
+								</RouterLink>
+							</div>
+							<div
+								:class="isHoveredForExplore ? 'transition bg-gradient-to-l from-red-500 to-blue-500 translate-x-[94px] opacity-100 easy-in duration-500' : 'opacity-0 bg-white'"
+								class="w-[30px]  translate-x-[-100px] h-[2px] rounded-full bg-white">
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
