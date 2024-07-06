@@ -21,7 +21,7 @@ let categorieHover = ref(false)
 
 <template>
 	<div>
-		<section id="BannerSection">
+		<section id="bannerSection">
 			<div>
 				<RouterLink to="/events">
 					<Banner />
@@ -64,7 +64,7 @@ let categorieHover = ref(false)
 			</div>
 		</section>
 
-		<section id="NewLine">
+		<section id="newLine">
 			<div class="px-20 mb-40">
 				<NewLine />
 				<div class="text-center relative mt-[35px]">
@@ -92,7 +92,7 @@ let categorieHover = ref(false)
 			</div>
 		</section>
 
-		<section id="VideoPlay">
+		<section id="videoPlay">
 			<div class="w-full mt-[-70px] mb-40 px-20">
 				<div class="flex flex-col gap-2 items-center relative">
 					<div class="relative">
@@ -121,7 +121,7 @@ let categorieHover = ref(false)
 			</div>
 		</section>
 
-		<section id="CollectionForFam">
+		<section id="collectionForFam">
 			<div class="px-20 mb-40 ">
 				<h2 class="font-extrabold mb-7 text-[25px] tracking-wide	 uppercase">Nike for the entire fam </h2>
 				<div class="flex items-center gap-2 w-full">
@@ -133,7 +133,7 @@ let categorieHover = ref(false)
 			</div>
 		</section>
 
-		<section id="NikeCarousel">
+		<section id="nikeCarousel">
 			<div class="mb-40  px-20">
 				<div class="flex flex-col gap-[60px]">
 					<NikeCarousel :data="[
@@ -182,7 +182,7 @@ let categorieHover = ref(false)
 			</div>
 		</section>
 
-		<section id="Explore&&Collections">
+		<section id="explore&&Collections">
 			<div class="px-20 mb-40">
 				<h2 class="uppercase mb-[30px] text-center font-serif text-[40px] font-semibold">Explore For More</h2>
 				<div class="flex gap-5 w-full">
@@ -192,7 +192,7 @@ let categorieHover = ref(false)
 			</div>
 		</section>
 
-		<section id="Categories">
+		<section id="categories">
 			<div class="flex flex-col w-full px-20 mb-20 ">
 				<div @mouseenter="categorieHover = true" @mouseleave="categorieHover = false"
 					class="mx-auto relative flex aligh-top  overflow-none  gap-[90px]">

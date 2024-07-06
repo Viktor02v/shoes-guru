@@ -96,7 +96,7 @@ let isHover = ref(false);
 							</RouterLink>
 						</button>
 
-						<span class="absolute z-30 text-center border w-[100px] py-3 px-4 right-20 bg-white top-[65px]"
+						<span class="absolute z-30 text-center border w-[100px] py-3 px-4 right-[135px] bg-white top-[65px]"
 							v-if="toggleProfile">
 							<ul class="text-[14px] text-gray font-seminold">
 								<RouterLink to="/profile">
