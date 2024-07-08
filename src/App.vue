@@ -133,7 +133,9 @@ let isHover = ref(false);
 						<div class="flex flex-col items-start">
 							<h3 class="font-medium text-[15px] mb-8">Resources</h3>
 							<ul class="text-[14px] font-medium text-gray-500  gap-3 flex flex-col">
-								<li>Gift Cards</li>
+								<RouterLink to="/gift-card">
+									<li>Gift Cards</li>
+								</RouterLink>
 								<li>Find a Store</li>
 								<li>Become a Member</li>
 								<li>NIKE x NBA</li>
@@ -186,13 +188,13 @@ let isHover = ref(false);
 
 				<div class="flex items-center mb-20">
 					<ul class=" flex items-center gap-7 text-[14px] font-medium text-gray-500">
-							<li class="hover:text-black">© 2024 Nike, Inc. All Rights Reserved</li>
+						<li class="hover:text-black">© 2024 Nike, Inc. All Rights Reserved</li>
 						<RouterLink to="/guides">
 							<li class="hover:text-black">Guides</li>
 						</RouterLink>
 						<RouterLink to="/sale-terms">
 							<li class="hover:text-black">Terms of Sale</li>
-						</RouterLink >
+						</RouterLink>
 						<RouterLink to="/use-terms">
 							<li class="hover:text-black">Terms of Use</li>
 						</RouterLink>
