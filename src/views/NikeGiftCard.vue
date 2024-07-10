@@ -161,7 +161,6 @@ let isHoveredList = ref(false)
 					</div>
 				</div>
 			</div>
-
 		</div>
 	</section>
 </template>

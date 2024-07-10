@@ -23,7 +23,7 @@ let categorieHover = ref(false)
 				class="sticky top-0 px-[683px] flex center z-30 hover:bg-opacity-100 transition  bg-opacity-20 bg-gradient-to-l from-white-100 to-gray-900 bg-gray-200">
 				<RouterLink to="/">
 					<button class="flex items-center align-center p-2">
-						<ChevronRight size="20" />
+						<ChevronLeft size="20" />
 						<p class="font-light text-center">back</p>
 					</button>
 				</RouterLink>
@@ -47,7 +47,7 @@ let categorieHover = ref(false)
 						</div>
 
 						<img
-							:class="isHovered ? 'translate-x-[-540px] translate-y-[-30px] transition duration-300' : 'translate-x-[300px] translate-y-[-200px] transition duration-300'"
+							:class="isHovered ? 'translate-x-[-538px] translate-y-[-30px] transition duration-300' : 'translate-x-[300px] translate-y-[-200px] transition duration-300'"
 							width="200" class=" mb-10 translate-x-[0px] z-30" src="/images/Air Jordan .png">
 					</div>
 
