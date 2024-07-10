@@ -117,7 +117,7 @@ let categorieHover = ref(false)
 		</div>
 	</section>
 
-	<section id="explore-sport">
+	<section id="explore-sport-for-men">
 		<div class="flex flex-col gap-7 px-20 mb-40 ">
 			<h2 class="font-extrabold text-[25px] uppercase">Explore Sport</h2>
 			<div class=" w-full overflow-hidden">

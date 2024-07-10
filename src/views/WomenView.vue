@@ -5,6 +5,8 @@ import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue';
 import ChevronRight from 'vue-material-design-icons/ChevronRight.vue';
 
 let isHovered = ref(false)
+let isHoveredForExploreFirstCard = ref(false)
+let isHoveredForExploreSecondCard = ref(false)
 </script>
 
 <template>
@@ -109,6 +111,40 @@ let isHovered = ref(false)
 						</div>
 					</div>
 				</RouterLink>
+			</div>
+		</div>
+	</section>
+
+	<section id="explore-sport-for-women">
+		<div class="flex flex-col gap-7 w-full mb-40 ">
+			<h2 class="font-extrabold pl-20 text-[25px] uppercase">Explore Sport</h2>
+			<div class=" w-full overflow-hidden">
+				<div class="relative flex flex-col w-full h-[740px]">
+					<div class=" flex absolute left-0 gap-10 z-20 top-0  w-1/2 flex-col items-center"
+						@mouseenter="isHoveredForExploreFirstCard = true" @mouseleave="isHoveredForExploreFirstCard = false">
+						<img src="/images/icons/Running-for-explore-sport-women.png">
+						<div class="absolute flex flex-col items-center bottom-10">
+							<h3 class="font-light text-white text-[25px]">Running</h3>
+							<button :class="isHoveredForExploreFirstCard ? ' bg-white opacity-100' : 'opacity-30'"
+								class=" rounded-full mt-[20px] transition easy-in duration-150  font-semibold text-[14px] py-2 px-6 border bg-transparent text-black">
+								Shop
+							</button>
+						</div>
+					</div>
+
+					<div class=" flex absolute right-0 z-20 top-0 gap-10  w-1/2 h-1/1   flex-col items-center"
+						@mouseenter="isHoveredForExploreSecondCard = true"
+						@mouseleave="isHoveredForExploreSecondCard = false">
+						<img src="/images/icons/Basketball-for-explore-sport-women.png">
+						<div class="absolute flex flex-col items-center bottom-10">
+							<h3 class="text-white font-light  text-[25px]">Basketball</h3>
+							<button :class="isHoveredForExploreSecondCard ? ' bg-white opacity-100' : 'opacity-30'"
+								class=" rounded-full  mt-[20px] transition easy-in duration-150 font-semibold text-[14px] py-2 px-6 border bg-transparent text-black">
+								Shop
+							</button>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
