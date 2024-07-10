@@ -3,6 +3,7 @@ import { RouterLink } from 'vue-router';
 import { ref } from 'vue'
 import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue';
 import ChevronRight from 'vue-material-design-icons/ChevronRight.vue';
+import CardEssentialsForWomen from '@/components/CardEssentialsForWomen.vue';
 
 let isHovered = ref(false)
 let isHoveredForExploreFirstCard = ref(false)
@@ -119,7 +120,7 @@ let isHoveredForExploreSecondCard = ref(false)
 		<div class="flex flex-col gap-7 w-full mb-40 ">
 			<h2 class="font-extrabold pl-20 text-[25px] uppercase">Explore Sport</h2>
 			<div class=" w-full overflow-hidden">
-				<div class="relative flex flex-col w-full h-[740px]">
+				<div class="relative flex flex-col w-full h-[700px]">
 					<div class=" flex absolute left-0 gap-10 z-20 top-0  w-1/2 flex-col items-center"
 						@mouseenter="isHoveredForExploreFirstCard = true" @mouseleave="isHoveredForExploreFirstCard = false">
 						<img src="/images/icons/Running-for-explore-sport-women.png">
@@ -148,4 +149,41 @@ let isHoveredForExploreSecondCard = ref(false)
 			</div>
 		</div>
 	</section>
+
+	<section class="trending-for-women">
+		<div class="flex flex-col gap-7 mb-40 px-20">
+			<h2 class="font-extrabold text-[25px] uppercase">Trending</h2>
+			<div class="relative w-full h-[700px] ">
+				<div class=" flex absolute left-0 z-20 top-0 gap-10  w-1/2  flex-col items-center">
+					<img src="/public/images/icons/Tranding-for-women-1.png">
+					<div class="absolute flex flex-col items-start left-10 bottom-10">
+						<div class="flex text-white gap-1 items-start flex-col">
+							<p class="text-[16px] ">Nike Alate White</p>
+							<h3 class="text-[20px]">The Perfect Workout Partner</h3>
+						</div>
+						<button
+							class=" rounded-full  mt-[20px] transition easy-in duration-150 font-semibold text-[14px] py-2 px-6 border bg-white text-black">
+							Shop
+						</button>
+					</div>
+				</div>
+
+				<div class=" flex absolute right-0 z-20 gap-10  w-1/2  flex-col items-center">
+					<img src="/public/images/icons/Tranding-for-women-2.png">
+					<div class="absolute flex flex-col items-start left-10 bottom-10 ">
+						<div class="flex text-white gap-1 items-start flex-col">
+							<p class="text-[16px]">Nike Bascketball's Latest</p>
+							<h3 class="text-[20px]">Sabrina 2 'Count Vision'</h3>
+						</div>
+						<button
+							class="rounded-full  mt-[20px] transition easy-in duration-150 font-semibold text-[14px] py-2 px-6 border bg-white text-black">
+							Shop
+						</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
 </template>
