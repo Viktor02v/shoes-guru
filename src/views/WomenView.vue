@@ -4,10 +4,12 @@ import { ref } from 'vue'
 import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue';
 import ChevronRight from 'vue-material-design-icons/ChevronRight.vue';
 import CardEssentialsForWomen from '@/components/CardEssentialsForWomen.vue';
+import ClassicCarouselForWomen from '@/components/ClassicCarouselForWomen.vue';
 
 let isHovered = ref(false)
 let isHoveredForExploreFirstCard = ref(false)
 let isHoveredForExploreSecondCard = ref(false)
+let isHoveredList = ref(false)
 </script>
 
 <template>
@@ -195,6 +197,107 @@ let isHoveredForExploreSecondCard = ref(false)
 					imageUrl="/images/icons/Shoes-for-men.png" />
 				<CardEssentialsForWomen class="hover:translate-y-[-20px] transition" :category="'Accessories'"
 					imageUrl="/images/icons/Accessories-for-men.png" />
+			</div>
+		</div>
+	</section>
+
+	<section class="classic-carousel-for-women-1">
+		<div class="flex flex-col mb-40">
+			<h2 class="font-extrabold text-[25px] uppercase px-20 mb-7">Classics Spotlight</h2>
+			<div class="flex flex-col gap-20">
+				<ClassicCarouselForWomen :data="[
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'DUNK' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'BLAZER' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'AIR MAX' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'Jordan 23' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'AIR JORDAN 1' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'Nike Zoom-92' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'Nike Zoom' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'AIR FORCE 1' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'DUNK' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'BLAZER' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'AIR MAX' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'JORDAN 23' },
+				]" />
+
+				<ClassicCarouselForWomen :data="[
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'DUNK' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'BLAZER' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'AIR MAX' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'Jordan 23' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'AIR JORDAN 1' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'Nike Zoom-92' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'Nike Zoom' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'AIR FORCE 1' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'DUNK' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'BLAZER' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'AIR MAX' },
+					{ imgUrl: '/images/icons/Shoes-for-men.png', category: 'JORDAN 23' },
+				]" />
+			</div>
+		</div>
+	</section>
+
+	<section id="dropListForWomen">
+		<div class="flex flex-col w-full px-20  ">
+			<div :class="isHoveredList ? 'mb-20' : 'mb-0'"
+				class="mx-auto relative flex aligh-top  overflow-none  gap-[90px]">
+				<div @mouseenter="isHoveredList = true" @mouseleave="isHoveredList = false">
+					<h3 class="font-extrabold mb-8 text-[20px] tracking-wide	 uppercase">Jordan Shoes</h3>
+					<ul class="flex flex-col  items-center">
+						<RouterLink to="Collections">
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan - "Italian Stallion"</li>
+							<li class="text-[16px] mb-4  font-semibold text-gray-400">Air Jordan - "Gotta Be the Shoes"</li>
+							<li class="text-[16px] mb-4  font-semibold text-gray-400">Air Jordan VIII - "Strap In"</li>
+							<li class="text-[16px] mb-4  font-semibold text-gray-400">Air Jordan IX - "Perfect Harmony"</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan X - "The Legacy Continues"
+							</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan X - "The Legacy Continues"
+							</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan X - "The Legacy Continues"
+							</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan X - "The Legacy Continues"
+							</li>
+						</RouterLink>
+					</ul>
+				</div>
+
+				<div>
+					<h3 class="font-extrabold mb-8 text-[20px] tracking-wide	 uppercase">Nike Shoes</h3>
+					<ul class="flex flex-col items-center">
+						<RouterLink to="Collections">
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Cortez Textile</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike AirForce 1'07</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike G.T Cut Cross</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Wearallday</li>
+						</RouterLink>
+					</ul>
+				</div>
+
+				<div class="">
+					<h3 class="font-extrabold mb-8 text-[20px] tracking-wide	 uppercase">Callab Jordan <span
+							class="text-[25px]"> && </span>Nike Shoes</h3>
+					<ul class="flex flex-col items-center">
+						<RouterLink to="Collections">
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Dunk Low Retro</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Dunk Low Retro</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Dunk Low Retro</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Dunk Low Retro</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan 1 Mid</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan 1 Low "White Toe"</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan 6 Retro "Cool Grey"</li>
+							<li class="text-[16px] font-semibold text-gray-400">Air Jordan 2 Retro OG "Chicago"
+							</li>
+						</RouterLink>
+					</ul>
+				</div>
+				<div @mouseenter="isHoveredList = true" @mouseleave="isHoveredList = false"
+					:class="isHoveredList ? 'translate-y-[200px] transition duration-200' : 'transition duration-200'"
+					class="absolute z-20 bottom-[0px] w-full  h-[200px] bg-white">
+					<div @mouseenter="isHoveredList = true" @mouseleave="isHoveredList = false"
+						class="w-full mt-10 border-b">
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>

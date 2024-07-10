@@ -181,7 +181,7 @@ let isHover = ref(false);
 					<div class="flex gap-2  items-center">
 						<Earth class="cursor-pointer" fillColor="#ABB2B9" size="20" />
 						<button type="button">
-							<p class="text-[14px]  font-medium text-gray-500">Ukraine</p>
+							<p class="text-[14px]  font-medium text-gray-500">English</p>
 						</button>
 					</div>
 				</div>
