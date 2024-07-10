@@ -87,7 +87,7 @@ let categorieHover = ref(false)
 		</div>
 	</section>
 
-	<section id="news">
+	<section id="newsForMen">
 		<div class=" mb-40">
 			<div class="flex items-ceter gap-10 flex-col" @mouseenter="isHoveredForNews = true"
 				@mouseleave="isHoveredForNews = false">
