@@ -185,5 +185,17 @@ let isHoveredForExploreSecondCard = ref(false)
 		</div>
 	</section>
 
-
+	<section id="essentials-for-women">
+		<div class="px-20 mb-40 ">
+			<h2 class="font-extrabold mb-7 text-[25px] tracking-wide	 uppercase">Essentials For Women </h2>
+			<div class="flex items-center gap-3 w-full">
+				<CardEssentialsForWomen class="hover:translate-y-[-20px] transition" :category="'Clothing'"
+					imageUrl="/images/icons/Clothing-for-men.png" />
+				<CardEssentialsForWomen class="hover:translate-y-[-20px] transition" :category="'Shoes'"
+					imageUrl="/images/icons/Shoes-for-men.png" />
+				<CardEssentialsForWomen class="hover:translate-y-[-20px] transition" :category="'Accessories'"
+					imageUrl="/images/icons/Accessories-for-men.png" />
+			</div>
+		</div>
+	</section>
 </template>
