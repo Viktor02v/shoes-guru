@@ -56,7 +56,7 @@ const slideTo = (val) => {
 		</div>
 
 		<Carousel
-			:class="currentSlide !== 2 ? 'pr-0 transition easy-out duration-200 ' : 'pr-20 transition easy-in duration-200 '" class="pr-10"
+			:class="currentSlide !== 0 ? 'pl-0 transition easy-out duration-200 ' : 'pl-5 transition easy-in duration-200 '" class="pr-10"
 			ref="carousel" v-model="currentSlide" :items-to-show="3" :items-to-scroll="1" :transition="800"
 			snapAlign="start">
 			<Slide v-for="slide in data" :key="slide" class="flex items-baseline">
