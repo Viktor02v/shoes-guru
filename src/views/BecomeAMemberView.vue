@@ -125,5 +125,72 @@ import PrevilegesCarouselForMembership from '@/components/PrevilegesCarouselForM
 		</div>
 	</section>
 
+	<section id="connectForMembership">
+		<div class="w-full flex flex-col mb-40 px-20">
+			<h2 class="font-normal text-[25px] hover:text-gray-600 transition duration-200 ">Connect Through Membership
+			</h2>
 
+			<div class="w-full flex items-center px-10 justify-between mt-20">
+				<RouterLink to="/community">
+					<div class="flex w-[200px] text-center flex-col items-center">
+						<div class="p-1 mb-10  bg-white shadow shadow-xl rounded-md">
+							<img width="60" src="/public/images/swoosh-nike-logo.png">
+						</div>
+						<h3 class="text-[20px] mb-3">
+							Nike App
+						</h3>
+						<p class="mb-6">
+							Keep up daily with the best of Nike, personalized for you.
+						</p>
+						<p class="text-[17px] underline">Explore</p>
+					</div>
+				</RouterLink>
+
+				<RouterLink to="/community">
+					<div class="flex w-[200px] text-center flex-col items-center">
+						<div class="p-1 mb-10  bg-white shadow shadow-xl rounded-md">
+							<img width="60" src="/public/images/swoosh-nike-logo.png">
+						</div>
+						<h3 class="text-[20px] mb-3">
+							Nike Run Club
+						</h3>
+						<p class="mb-6">
+							Run with us in the Nike Run Club App.
+						</p>
+						<p class="text-[17px] underline">Explore</p>
+					</div>
+				</RouterLink>
+
+				<RouterLink to="/community">
+					<div class="flex w-[200px] text-center flex-col items-center">
+						<div class="p-1 mb-10  bg-white shadow shadow-xl rounded-md">
+							<img width="60" src="/public/images/swoosh-nike-logo.png">
+						</div>
+						<h3 class="text-[20px] mb-3">
+							Nike Training Club
+						</h3>
+						<p class="mb-6">
+							Move with the best in the Nike Training Club App.
+						</p>
+						<p class="text-[17px] underline">Explore</p>
+					</div>
+				</RouterLink>
+
+				<RouterLink to="/community">
+					<div class="flex w-[200px] text-center flex-col items-center">
+						<div class="p-1 mb-10  bg-white shadow shadow-xl rounded-md">
+							<img width="60" src="/public/images/swoosh-nike-logo.png">
+						</div>
+						<h3 class="text-[20px] mb-3">
+							SNKRS
+						</h3>
+						<p class="mb-6">
+							Find the freshest drops in the SNKRS App.
+						</p>
+						<p class="text-[17px] underline">Explore</p>
+					</div>
+				</RouterLink>
+			</div>
+		</div>
+	</section>
 </template>
