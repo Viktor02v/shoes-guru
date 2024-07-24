@@ -4,6 +4,7 @@ import { ref } from 'vue'
 import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue';
 import ChevronRight from 'vue-material-design-icons/ChevronRight.vue';
 import BenefitsCarouselForMembership from '@/components/BenefitsCarouselForMembership.vue';
+import PrevilegesCarouselForMembership from '@/components/PrevilegesCarouselForMembership.vue';
 </script>
 
 <template>
@@ -86,5 +87,16 @@ import BenefitsCarouselForMembership from '@/components/BenefitsCarouselForMembe
 		</div>
 	</section>
 
-
+	<section id="previlegesCarouselForMembership">
+		<div class="flex flex-col pl-20 mb-20 w-full">
+			<h2 class="font-normal text-[25px] hover:text-gray-600 transition duration-200 ">Members Also Get</h2>
+			<PrevilegesCarouselForMembership :data="[
+				{ imgUrl: '/images/icons/Member-product-for-membership.png', category: 'Free Shipping', description: 'Members score free delivery on every $50+ order.' },
+				{ imgUrl: '/images/icons/How-we-say-thank-you-for-membership.png', category: 'Wear Test', description: 'Not sure? Try it for 60 days—return if it is not a fit.' },
+				{ imgUrl: '/images/icons/Movement-for-membership.png', category: 'Receiptless Returns', description: 'Return or exchange receipt-free in-store or in the Nike App.' },
+				{ imgUrl: '/images/icons/Customization-for-membership.png', category: 'Member Experiences', description: 'Join your community for live, Member-only events.' },
+				{ imgUrl: '/images/icons/How-we-say-thank-you-for-membership.png', category: 'Nike Experts', description: 'Members can get sport and style advice from experts.' },
+			]" />
+		</div>
+	</section>
 </template>
