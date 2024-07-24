@@ -3,6 +3,7 @@ import { RouterLink } from 'vue-router';
 import { ref } from 'vue'
 import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue';
 import ChevronRight from 'vue-material-design-icons/ChevronRight.vue';
+import BenefitsCarouselForMembership from '@/components/BenefitsCarouselForMembership.vue';
 </script>
 
 <template>
@@ -72,5 +73,16 @@ import ChevronRight from 'vue-material-design-icons/ChevronRight.vue';
 		</div>
 	</section>
 
-	
+	<section id="benefitsCarouselForMembership">
+		<div class="flex flex-col pl-20 mb-20 w-full">
+			<h2 class="font-normal text-[25px] hover:text-gray-600 transition duration-200 ">Member Benefits</h2>
+			<BenefitsCarouselForMembership :data="[
+				{ imgUrl: '/images/icons/Member-product-for-membership.png', category: 'Member Product ', description: 'Your Exclusive Access', buttonText: 'Shop', buttonUrl: '/shop' },
+				{ imgUrl: '/images/icons/How-we-say-thank-you-for-membership.png', category: 'Member Revard', description: 'How We Say Thank You', buttonText: 'Celebrate', buttonUrl: '/community' },
+				{ imgUrl: '/images/icons/Movement-for-membership.png', category: 'Sport And Wellness Apps', description: 'Movement Where You Are At', buttonText: 'Move', buttonUrl: '/shop' },
+				{ imgUrl: '/images/icons/Customization-for-membership.png', category: 'Nike By You', description: 'Your Customization Service', buttonText: 'Customize', buttonUrl: '/gift-card' },
+				{ imgUrl: '/images/icons/How-we-say-thank-you-for-membership.png', category: 'SNKRS', description: 'Your Ultimate Sneaker Community', buttonText: 'Explore', buttonUrl: '/shop' },
+			]" />
+		</div>
+	</section>
 </template>
