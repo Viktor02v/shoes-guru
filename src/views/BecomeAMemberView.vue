@@ -1,10 +1,14 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 import { ref } from 'vue'
-import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue';
-import ChevronRight from 'vue-material-design-icons/ChevronRight.vue';
+import ChevronUp from 'vue-material-design-icons/ChevronUp.vue';
+import ChevronDown from 'vue-material-design-icons/ChevronDown.vue';
 import BenefitsCarouselForMembership from '@/components/BenefitsCarouselForMembership.vue';
 import PrevilegesCarouselForMembership from '@/components/PrevilegesCarouselForMembership.vue';
+
+let clickToRead1 = ref(false)
+let clickToRead2 = ref(false)
+let clickToRead3 = ref(false)
 </script>
 
 <template>
@@ -88,7 +92,7 @@ import PrevilegesCarouselForMembership from '@/components/PrevilegesCarouselForM
 	</section>
 
 	<section id="previlegesCarouselForMembership">
-		<div class="flex flex-col pl-20 mb-[280px] w-full">
+		<div class="flex flex-col pl-20 mb-[300px] w-full">
 			<h2 class="font-normal text-[25px] hover:text-gray-600 transition duration-200 ">Members Also Get</h2>
 			<PrevilegesCarouselForMembership :data="[
 				{ imgUrl: '/images/icons/Member-product-for-membership.png', category: 'Free Shipping', description: 'Members score free delivery on every $50+ order.' },
@@ -101,7 +105,7 @@ import PrevilegesCarouselForMembership from '@/components/PrevilegesCarouselForM
 	</section>
 
 	<section id="miniBannerForMembership">
-		<div class="w-[1440px] overflow-hidden gap-[270px] text-white flex items-center bg-[#F90000] h-[30px] mb-40">
+		<div class="w-[1440px] overflow-hidden gap-[270px] text-white flex items-center bg-[#F90000] h-[30px] mb-60">
 			<div class="flex ml-[-140px] items-center">
 				<img width="70px" src="/public/images/swoosh-nike-logo.png">
 				<p class="font-serif text-[20px]">Membership</p>
@@ -126,11 +130,11 @@ import PrevilegesCarouselForMembership from '@/components/PrevilegesCarouselForM
 	</section>
 
 	<section id="connectForMembership">
-		<div class="w-full flex flex-col mb-40 px-20">
+		<div class="w-full flex flex-col mb-60 px-20">
 			<h2 class="font-normal text-[25px] hover:text-gray-600 transition duration-200 ">Connect Through Membership
 			</h2>
 
-			<div class="w-full flex items-center px-10 justify-between mt-20">
+			<div class="w-full flex items-center px-10 justify-between mt-40">
 				<RouterLink to="/community">
 					<div class="flex w-[200px] text-center flex-col items-center">
 						<div class="p-1 mb-10  bg-white shadow shadow-xl rounded-md">
@@ -190,6 +194,71 @@ import PrevilegesCarouselForMembership from '@/components/PrevilegesCarouselForM
 						<p class="text-[17px] underline">Explore</p>
 					</div>
 				</RouterLink>
+			</div>
+		</div>
+	</section>
+
+	<section id="questionsForMembership">
+		<div class="w-[1440px] px-20">
+			<h2 class="font-normal text-[25px] hover:text-gray-600 transition duration-200 mb-20">Frequently Asked
+				Questions
+			</h2>
+			<div class="w-full flex-col">
+				<div class="flex relative justify-between transition duration-200 mb-10"
+					:class="clickToRead1 ? 'mb-[150px] transition duration-200' : 'mb-10 transition duration-200'"
+					@click="clickToRead1 = !clickToRead1">
+					<div class="flex cursor-pointer flex-col text-[20px]">
+						What is Nike Membership?
+						<p class="text-[20px] mt-8">
+							Nike Membership is access to the very best of Nike through any of our apps, exclusive products, and
+							Member-only experiences. Nike Members also enjoy free shipping on orders of $50 or more, 60-day
+							Wear Test, and receipt-less returns. It is free and easy to join.<RouterLink to="/profile"> <span class="underline font-medium"> Sign Up</span></RouterLink>.
+						</p>
+					</div>
+					<ChevronDown size="30" class="cursor-pointer"
+						:class="clickToRead1 ? 'rotate-180 transition duration-200' : 'transition duration-200'" />
+					<div class="absolute top-[40px] w-full overflow-hidden bg-white h-[100px]  "
+						:class="clickToRead1 ? 'translate-y-[100px] transition duration-400' : 'transition duration-400'">
+						<div class="w-full mt-[70px] border-gray-300 border-b">
+						</div>
+					</div>
+				</div>
+
+				<div class="flex relative justify-between transition duration-200 mb-10"
+					:class="clickToRead2 ? 'mb-[150px] transition duration-200' : 'mb-10 transition duration-200'"
+					@click="clickToRead2 = !clickToRead2">
+					<div class="flex cursor-pointer flex-col text-[20px]">
+						Am I a Nike Member?
+						<p class="text-[20px] mt-8">
+							Maybe! If you have ever logged into a Nike app, then yes, yes you are. Welcome back! If not, let us change that.<RouterLink to="/profile"> <span class="underline font-medium"> Sign Up</span></RouterLink>.
+						</p>
+					</div>
+					<ChevronDown size="30" class="cursor-pointer"
+						:class="clickToRead2 ? 'rotate-180 transition duration-200' : 'transition duration-200'" />
+					<div class="absolute top-[40px] w-full overflow-hidden bg-white h-[100px]  "
+						:class="clickToRead2 ? 'translate-y-[100px] transition duration-400' : 'transition duration-400'">
+						<div class="w-full mt-[70px] border-gray-300 border-b">
+						</div>
+					</div>
+				</div>
+
+				<div class="flex relative justify-between transition duration-200 mb-60"
+					:class="clickToRead3 ? 'mb-[150px] transition duration-200' : 'mb-10 transition duration-200'"
+					@click="clickToRead3 = !clickToRead3">
+					<div class="flex cursor-pointer flex-col text-[20px]">
+						Is Nike Membership free?
+						<p class="text-[20px] mt-8">
+							100% yes. Members enjoy all the benefits of Nike Membership at no cost, because once you are in, we got you. Zero money gets you access to all of it.<RouterLink to="/profile"> <span class="underline font-medium"> Sign Up</span></RouterLink>.
+						</p>
+					</div>
+					<ChevronDown size="30" class="cursor-pointer"
+						:class="clickToRead3 ? 'rotate-180 transition duration-200' : 'transition duration-200'" />
+					<div class="absolute top-[40px] w-full overflow-hidden bg-white h-[100px]  "
+						:class="clickToRead3 ? 'translate-y-[100px] transition duration-400' : 'transition duration-400'">
+						<div class="w-full mt-[70px] border-gray-300 border-b">
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>
