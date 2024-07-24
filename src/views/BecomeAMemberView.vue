@@ -242,8 +242,8 @@ let clickToRead3 = ref(false)
 					</div>
 				</div>
 
-				<div class="flex relative justify-between transition duration-200 mb-60"
-					:class="clickToRead3 ? 'mb-[150px] transition duration-200' : 'mb-10 transition duration-200'"
+				<div class="flex relative justify-between transition duration-200 mb-20"
+					:class="clickToRead3 ? 'mb-[150px] transition duration-200' : ' transition duration-200'"
 					@click="clickToRead3 = !clickToRead3">
 					<div class="flex cursor-pointer flex-col text-[20px]">
 						Is Nike Membership free?
@@ -259,6 +259,15 @@ let clickToRead3 = ref(false)
 						</div>
 					</div>
 				</div>
+			</div>
+		</div>
+	</section>
+
+	<section id="membershipBannerForMembership">
+		<div class="w-[1440px] mb-40">
+			<div class="flex items-center justify-center h-[400px] border-b border-gray-300 w-[1440px]">
+				<img width="90" src="/public/images/swoosh-nike-logo.png" alt="">
+				<h3 class="font-serif  text-[30px]">Membership</h3>
 			</div>
 		</div>
 	</section>
