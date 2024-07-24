@@ -75,7 +75,7 @@ import PrevilegesCarouselForMembership from '@/components/PrevilegesCarouselForM
 	</section>
 
 	<section id="benefitsCarouselForMembership">
-		<div class="flex flex-col pl-20 mb-20 w-full">
+		<div class="flex flex-col pl-20 mb-40 w-full">
 			<h2 class="font-normal text-[25px] hover:text-gray-600 transition duration-200 ">Member Benefits</h2>
 			<BenefitsCarouselForMembership :data="[
 				{ imgUrl: '/images/icons/Member-product-for-membership.png', category: 'Member Product ', description: 'Your Exclusive Access', buttonText: 'Shop', buttonUrl: '/shop' },
@@ -88,7 +88,7 @@ import PrevilegesCarouselForMembership from '@/components/PrevilegesCarouselForM
 	</section>
 
 	<section id="previlegesCarouselForMembership">
-		<div class="flex flex-col pl-20 mb-20 w-full">
+		<div class="flex flex-col pl-20 mb-[280px] w-full">
 			<h2 class="font-normal text-[25px] hover:text-gray-600 transition duration-200 ">Members Also Get</h2>
 			<PrevilegesCarouselForMembership :data="[
 				{ imgUrl: '/images/icons/Member-product-for-membership.png', category: 'Free Shipping', description: 'Members score free delivery on every $50+ order.' },
@@ -99,4 +99,31 @@ import PrevilegesCarouselForMembership from '@/components/PrevilegesCarouselForM
 			]" />
 		</div>
 	</section>
+
+	<section id="miniBannerForMembership">
+		<div class="w-[1440px] overflow-hidden gap-[270px] text-white flex items-center bg-[#F90000] h-[30px] mb-40">
+			<div class="flex ml-[-140px] items-center">
+				<img width="70px" src="/public/images/swoosh-nike-logo.png">
+				<p class="font-serif text-[20px]">Membership</p>
+			</div>
+			<div class="flex items-center">
+				<img width="70px" src="/public/images/swoosh-nike-logo.png">
+				<p class="font-serif text-[20px]">Membership</p>
+			</div>
+			<div class="flex items-center">
+				<img width="70px" src="/public/images/swoosh-nike-logo.png">
+				<p class="font-serif text-[20px]">Membership</p>
+			</div>
+			<div class="flex items-center">
+				<img width="70px" src="/public/images/swoosh-nike-logo.png">
+				<p class="font-serif text-[20px]">Membership</p>
+			</div>
+			<div class="flex items-center">
+				<img width="70px" src="/public/images/swoosh-nike-logo.png">
+				<p class="font-serif text-[20px]">Membership</p>
+			</div>
+		</div>
+	</section>
+
+
 </template>
