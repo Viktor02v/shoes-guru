@@ -3,6 +3,7 @@ import Home from '../views/HomeView.vue'
 import Man from '../views/MenView.vue'
 import NikeGiftCard from '../views/NikeGiftCard.vue'
 import Woman from'../views/WomenView.vue'
+import Membership from'../views/BecomeAMemberView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -26,6 +27,11 @@ const router = createRouter({
       path: '/woman',
       name: 'woman',
       component: Woman
+    },
+	 {
+      path: '/membership',
+      name: 'membership',
+      component: Membership,
     },
   ]
 })

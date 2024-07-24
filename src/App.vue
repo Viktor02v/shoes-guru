@@ -137,7 +137,9 @@ let isHover = ref(false);
 									<li>Gift Cards</li>
 								</RouterLink>
 								<li>Find a Store</li>
-								<li>Become a Member</li>
+								<RouterLink to="/membership">
+									<li>Become a Member</li>
+								</RouterLink>
 								<li>NIKE x NBA</li>
 								<li>Nike Journal</li>
 								<li>Site Feedback</li>
