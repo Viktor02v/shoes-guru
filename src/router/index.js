@@ -4,6 +4,7 @@ import Man from '../views/MenView.vue'
 import NikeGiftCard from '../views/NikeGiftCard.vue'
 import Woman from'../views/WomenView.vue'
 import Membership from'../views/BecomeAMemberView.vue'
+import NIKExNBA from'../views/NIKExNBAxView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -32,6 +33,11 @@ const router = createRouter({
       path: '/membership',
       name: 'membership',
       component: Membership,
+    },
+	 {
+      path: '/nike-nba',
+      name: 'nike-nba',
+      component: NIKExNBA,
     },
   ]
 })

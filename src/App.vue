@@ -140,7 +140,9 @@ let isHover = ref(false);
 								<RouterLink to="/membership">
 									<li>Become a Member</li>
 								</RouterLink>
-								<li>NIKE x NBA</li>
+								<RouterLink to="/nike-nba">
+									<li>NIKE x NBA</li>
+								</RouterLink>
 								<li>Nike Journal</li>
 								<li>Site Feedback</li>
 							</ul>
