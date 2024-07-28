@@ -8,7 +8,7 @@ import Play from 'vue-material-design-icons/Play.vue';
 </script>
 
 <template>
-	<section id="navigationForNIKExNBA">
+	<section id="navigationForNikeNBA">
 		<div
 			class="sticky top-0 px-[683px] flex center z-30 hover:bg-opacity-100 transition  bg-opacity-20 bg-gradient-to-l from-white-100 to-gray-900 bg-gray-200">
 			<RouterLink to="/">
@@ -38,8 +38,8 @@ import Play from 'vue-material-design-icons/Play.vue';
 		</div>
 	</section>
 
-	<section id="watch&BecomeAMemberForNIKExNBA">
-		<div class="px-20 w-[1440px] mb-40">
+	<section id="watch&BecomeMemberForNikeNBA">
+		<div class="px-20 w-[1440px] mb-10">
 			<div
 				class="bg-[url('/images/icons/Become-a-member-for-NIkeXNBA.png')] bg-local mb-20 bg-center w-full relative  h-[600px] ">
 				<div class="flex flex-col mx-auto text-white items-center">
@@ -106,8 +106,8 @@ import Play from 'vue-material-design-icons/Play.vue';
 	</section>
 
 
-	<section id="airTime">
-		<div class="px-20 w-[1440px] mb-40">
+	<section id="airTimeForNikeNBA">
+		<div class="px-20 w-[1440px] mb-10">
 			<h2 class="font-normal text-[25px] mb-5">Air Time</h2>
 			<div
 				class="bg-[url('/images/icons/Air-time-for-Nike-NBA.png')] bg-local mb-20 bg-center w-full relative  h-[600px] ">
@@ -150,5 +150,66 @@ import Play from 'vue-material-design-icons/Play.vue';
 		</div>
 	</section>
 
+	<section id="gameAppForNikeNBA">
+		<div class="px-20 h-full mb-20 w-[1440px]">
 
+			<div class="flex gap-3 mb-20 items-center">
+				<div class="relative w-full ">
+					<img class="hover:brightness-50 transition duration-200"
+						src="/images/icons/Nike-NBA-player-one-for-NIke-NBA.png" alt="">
+					<div class="absolute top-0 left-0">
+						<div class="flex gap-3">
+							<img width="80" src="/images/nba-logo.png" alt="">
+							<img width="80" src="/images/swoosh-nike-logo.png" alt="">
+						</div>
+					</div>
+					<div class="absolute w-[500px] text-white left-12 bottom-10">
+						<h3 class="font-normal text-[30px]">Going Beyond the Game</h3>
+						<p class="font-light">We are bringing the conversation on basketball culture to the live action of NBA
+							games with the
+							athletes, gear, and stories that have shaped our love for hoops. Check up with our hosts, Alexis
+							Morgan, Kenny Beecham, and Jamiersen Green alongside special guests and voices from across the Nike
+							Basketball universe as they drop in-game announcements, products, and more.</p>
+					</div>
+				</div>
+
+				<div class="relative w-full ">
+					<img class="hover:brightness-50 transition duration-200"
+						src="/images/icons/Nike-NBA-player-two-for-NIke-NBA.png" alt="">
+					<div class="absolute top-0 left-0">
+						<div class="flex gap-3">
+							<img width="80" src="/images/nba-logo.png" alt="">
+							<img width="80" src="/images/swoosh-nike-logo.png" alt="">
+						</div>
+					</div>
+					<div class="absolute w-[500px] text-white left-12 bottom-10">
+						<h3 class="font-normal text-[30px]">NBA is the Home of Air Time</h3>
+						<p class="font-light">Download the NBA app and get free access to Air Time and League Pass on select
+							game days after becoming a Nike x NBA ID Member.</p>
+
+						<button class="bg-white mt-5 font-medium text-black rounded-full px-4 py-2">
+							<p>Download NBA App</p>
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<div class="flex flex-col gap-[80px] items-center  ">
+				<img width="120" class="p-2 bg-white shadow shadow-inner  shadow-xl rounded-[30%]"
+					src="/images/swoosh-nike-logo.png" alt="">
+
+				<div class="flex flex-col items-center gap-4 w-[650px]">
+					<h3 class="font-normal text-[30px]">Don't Miss a Moment</h3>
+
+					<p class="font-light text-center">
+						Download the Nike App to make sure you catch all the latest Nike x NBA ID Memeber benefits.
+					</p>
+
+					<button class="bg-black mt-5 font-medium text-white rounded-full px-4 py-2">
+						<p class="text-[15px]">Download Nike App</p>
+					</button>
+				</div>
+			</div>
+		</div>
+	</section>
 </template>

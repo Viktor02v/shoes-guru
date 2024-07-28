@@ -157,7 +157,7 @@ let isHoveredList = ref(false)
 			<h2 class="font-extrabold text-[25px] uppercase">Trending</h2>
 			<div class="relative w-full h-[700px] ">
 				<div class=" flex absolute left-0 z-20 top-0 gap-10  w-1/2  flex-col items-center">
-					<img src="/public/images/icons/Tranding-for-women-1.png">
+					<img src="/images/icons/Tranding-for-women-1.png">
 					<div class="absolute flex flex-col items-start left-10 bottom-10">
 						<div class="flex text-white gap-1 items-start flex-col">
 							<p class="text-[16px] ">Nike Alate White</p>
@@ -171,7 +171,7 @@ let isHoveredList = ref(false)
 				</div>
 
 				<div class=" flex absolute right-0 z-20 gap-10  w-1/2  flex-col items-center">
-					<img src="/public/images/icons/Tranding-for-women-2.png">
+					<img src="/images/icons/Tranding-for-women-2.png">
 					<div class="absolute flex flex-col items-start left-10 bottom-10 ">
 						<div class="flex text-white gap-1 items-start flex-col">
 							<p class="text-[16px]">Nike Bascketball's Latest</p>
