@@ -94,9 +94,12 @@ import Play from 'vue-material-design-icons/Play.vue';
 						as they drop all seasons long. Avaliable to stream in the US only. Local blackout restrictions apply.
 					</p>
 
-					<button type="button" class="px-4 bg-black font-medium text-white rounded-full py-2">
-						<p class="text-[15px]">Link Accounts</p>
-					</button>
+					<RouterLink to="/profile">
+						<button type="button" class="px-4 bg-black font-medium text-white rounded-full py-2">
+							<p class="text-[15px]">Link Accounts</p>
+						</button>
+					</RouterLink>
+
 				</div>
 			</div>
 		</div>
