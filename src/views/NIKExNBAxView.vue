@@ -104,4 +104,51 @@ import Play from 'vue-material-design-icons/Play.vue';
 			</div>
 		</div>
 	</section>
+
+
+	<section id="airTime">
+		<div class="px-20 w-[1440px] mb-40">
+			<h2 class="font-normal text-[25px] mb-5">Air Time</h2>
+			<div
+				class="bg-[url('/images/icons/Air-time-for-Nike-NBA.png')] bg-local mb-20 bg-center w-full relative  h-[600px] ">
+				<div class="flex flex-col mx-auto text-white items-center">
+					<RouterLink to="/videos">
+						<button type="button"
+							class="px-4 absolute left-10 bottom-10 bg-white font-medium text-black rounded-full py-2">
+							<div class="flex items-center gap-1">
+								<p>Watch</p>
+								<Play />
+							</div>
+						</button>
+					</RouterLink>
+				</div>
+			</div>
+
+			<div class=" ml-40 flex gap-20 flex-col w-[700px]">
+
+				<div class="flex flex-col items-start  gap-4 ">
+
+					<h3 class="font-normal text-[30px]">
+						Air Time Rewind
+					</h3>
+
+					<p class="font-light">
+						Our first Air Time tipped on November 28th as we watched the Boston Celtics defeat the Chicago Bulls
+						in In-Season Tournament Group Play. We celebrated the Nike NBA 2023-24 City Edition Jerseys with
+						special guests froom the Nike Family : Tyrese Haliburton, Napheesa Collier, Vince Carter, Dawn Staley,
+						and Deon Point. In addition to free access to the Air Time, Nike x NBA ID Members get exclussive
+						access to product, content, and experiences.
+					</p>
+
+					<RouterLink to="/profile">
+						<button type="button" class="px-4 bg-black font-medium text-white rounded-full py-2">
+							<p class="text-[15px]">Become a Nike x NBA ID Member</p>
+						</button>
+					</RouterLink>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
 </template>
