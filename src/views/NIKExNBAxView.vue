@@ -110,7 +110,6 @@ let isHoveredList = ref(false)
 		</div>
 	</section>
 
-
 	<section id="airTimeForNikeNBA">
 		<div class="px-20 w-[1440px] mb-10">
 			<h2 class="font-normal text-[25px] mb-5">Air Time</h2>

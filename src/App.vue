@@ -13,11 +13,27 @@ let toggleStatus = ref(false);
 let isHover = ref(false);
 
 
+var lastScrollTop = 0;
+let scrolling = ref(false);
+
+window.addEventListener("scroll", function () {
+	var scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+	if (scrollTop > lastScrollTop) {
+		scrolling.value = true;
+	}
+	else {
+		scrolling.value = false;
+	}
+	lastScrollTop = scrollTop;
+
+})
+
 </script>
 
 <template>
-	<div class="flex flex-col h-full my-auto">
-		<header id="TopNav" @mouseenter="isHover = true" @mouseleave="isHover = false">
+	<div class="flex flex-col h-full my-auto ">
+		<nav :class="scrolling ? '-translate-y-[74px] transition  duration-200' : 'transition  duration-100'" id="TopNav"
+			@mouseenter="isHover = true" @mouseleave="isHover = false">
 			<div class="relative z-40 flex items-center justify-between w-[100%] h-[74px]">
 				<div :class="isHover ? 'bg-[#F1F1F1]  transition easy-in' : 'bg-[#F4F6F6] transition easy-out'"
 					class="fixed bg-[#F4F6F6] flex items-center  w-[100%] h-[74px] justify-between px-20">
@@ -118,7 +134,7 @@ let isHover = ref(false);
 					</div>
 				</div>
 			</div>
-		</header>
+		</nav>
 
 		<main>
 			<div class="relative flex flex-col ">

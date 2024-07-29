@@ -23,8 +23,8 @@ let clickToRead3 = ref(false)
 			</RouterLink>
 		</div>
 
-		<div class="w-[1440px] px-20">
-			<div class="flex mt-20 pr-[100px] w-full mx-auto items-center pb-20 ">
+		<div class="w-[1440px] mb-20 relative top-10 z-30 h-[100px] border flex justify-center   bg-white px-20">
+			<div class="flex mt-20 pr-[100px]  w-full mx-auto items-center pb-20 ">
 
 				<div class="w-[240px]">
 					<h2 class="font-normal text-[25px] hover:text-gray-600 transition duration-200 ">Nike Membership</h2>
@@ -212,7 +212,8 @@ let clickToRead3 = ref(false)
 						<p class="text-[20px] mt-8">
 							Nike Membership is access to the very best of Nike through any of our apps, exclusive products, and
 							Member-only experiences. Nike Members also enjoy free shipping on orders of $50 or more, 60-day
-							Wear Test, and receipt-less returns. It is free and easy to join.<RouterLink to="/profile"> <span class="underline font-medium"> Sign Up</span></RouterLink>.
+							Wear Test, and receipt-less returns. It is free and easy to join.<RouterLink to="/profile"> <span
+									class="underline font-medium"> Sign Up</span></RouterLink>.
 						</p>
 					</div>
 					<ChevronDown size="30" class="cursor-pointer"
@@ -230,7 +231,9 @@ let clickToRead3 = ref(false)
 					<div class="flex cursor-pointer flex-col text-[20px]">
 						Am I a Nike Member?
 						<p class="text-[20px] mt-8">
-							Maybe! If you have ever logged into a Nike app, then yes, yes you are. Welcome back! If not, let us change that.<RouterLink to="/profile"> <span class="underline font-medium"> Sign Up</span></RouterLink>.
+							Maybe! If you have ever logged into a Nike app, then yes, yes you are. Welcome back! If not, let us
+							change that.<RouterLink to="/profile"> <span class="underline font-medium"> Sign Up</span>
+							</RouterLink>.
 						</p>
 					</div>
 					<ChevronDown size="30" class="cursor-pointer"
@@ -248,7 +251,9 @@ let clickToRead3 = ref(false)
 					<div class="flex cursor-pointer flex-col text-[20px]">
 						Is Nike Membership free?
 						<p class="text-[20px] mt-8">
-							100% yes. Members enjoy all the benefits of Nike Membership at no cost, because once you are in, we got you. Zero money gets you access to all of it.<RouterLink to="/profile"> <span class="underline font-medium"> Sign Up</span></RouterLink>.
+							100% yes. Members enjoy all the benefits of Nike Membership at no cost, because once you are in, we
+							got you. Zero money gets you access to all of it.<RouterLink to="/profile"> <span
+									class="underline font-medium"> Sign Up</span></RouterLink>.
 						</p>
 					</div>
 					<ChevronDown size="30" class="cursor-pointer"
