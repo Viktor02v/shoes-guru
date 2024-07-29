@@ -8,6 +8,8 @@ import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue';
 import ChevronUp from 'vue-material-design-icons/ChevronUp.vue';
 import ChevronDown from 'vue-material-design-icons/ChevronDown.vue';
 import Play from 'vue-material-design-icons/Play.vue';
+
+let isHoveredList = ref(false)
 </script>
 
 <template>
@@ -226,11 +228,12 @@ import Play from 'vue-material-design-icons/Play.vue';
 			</div>
 			<div class="flex flex-col items-center">
 				<h3 class="font-normal text-[30px]">Gear Up </h3>
-				<p class=" font-light mt-2 mb-5">Show your love for the game with our latest Nike x NBA and backetball gear</p>
+				<p class=" font-light mt-2 mb-5">Show your love for the game with our latest Nike x NBA and backetball gear
+				</p>
 				<RouterLink to="/shop">
-				<button type="button" class="px-4 bg-black font-medium text-white rounded-full py-2">
-					<p class="text-[15px]">Shop Nike x NBA</p>
-				</button>
+					<button type="button" class="px-4 bg-black font-medium text-white rounded-full py-2">
+						<p class="text-[15px]">Shop Nike x NBA</p>
+					</button>
 				</RouterLink>
 			</div>
 		</div>
@@ -239,16 +242,16 @@ import Play from 'vue-material-design-icons/Play.vue';
 	<section class="carouselForNikeNBA">
 		<div class="w-[1440px] px-20 mb-40">
 			<CarouselForNikeNBA :data="[
-				{ imgUrl: '/images/icons/Nike-dunk-Low-for-Nike-x-NBA.png', category: 'Nike Dunk Low ', description: `Women's shoes`, discountPrice:'102.97', price:'120' },
-				{ imgUrl: '/images/icons/Long-sleeve-for-Nike-NBA.png', category: 'Nike Life', description: `Men's Long-sleeve Oxford Button-Down Shirt`, price:'100' },
-				{ imgUrl: '/images/icons/El-Chino-Pants-For-Nike-NBA.png', category: 'Nike Life', description: `Men's El Chino Pants`, price:'95' },
-				{ imgUrl: '/images/icons/Nike-dunk-Low-for-Nike-x-NBA.png', category: 'Nike Dunk Low ', description: `Women's shoes`, discountPrice:'102.97', price:'120' },
-				{ imgUrl: '/images/icons/Long-sleeve-for-Nike-NBA.png', category: 'Nike Life', description: `Men's Long-sleeve Oxford Button-Down Shirt`, price:'100' },
-				{ imgUrl: '/images/icons/El-Chino-Pants-For-Nike-NBA.png', category: 'Nike Life', description: `Men's El Chino Pants`, price:'95' },
-				{ imgUrl: '/images/icons/Nike-dunk-Low-for-Nike-x-NBA.png', category: 'Nike Dunk Low ', description: `Women's shoes`, discountPrice:'102.97', price:'120' },
-				{ imgUrl: '/images/icons/Long-sleeve-for-Nike-NBA.png', category: 'Nike Life', description: `Men's Long-sleeve Oxford Button-Down Shirt`, price:'100' },
-				{ imgUrl: '/images/icons/El-Chino-Pants-For-Nike-NBA.png', category: 'Nike Life', description: `Men's El Chino Pants`, price:'95' },
-				{ imgUrl: '/images/icons/Nike-dunk-Low-for-Nike-x-NBA.png', category: 'Nike Dunk Low ', description: `Women's shoes`, discountPrice:'102.97', price:'120' },
+				{ imgUrl: '/images/icons/Nike-dunk-Low-for-Nike-x-NBA.png', category: 'Nike Dunk Low ', description: `Women's shoes`, discountPrice: '102.97', price: '120' },
+				{ imgUrl: '/images/icons/Long-sleeve-for-Nike-NBA.png', category: 'Nike Life', description: `Men's Long-sleeve Oxford Button-Down Shirt`, price: '100' },
+				{ imgUrl: '/images/icons/El-Chino-Pants-For-Nike-NBA.png', category: 'Nike Life', description: `Men's El Chino Pants`, price: '95' },
+				{ imgUrl: '/images/icons/Nike-dunk-Low-for-Nike-x-NBA.png', category: 'Nike Dunk Low ', description: `Women's shoes`, discountPrice: '102.97', price: '120' },
+				{ imgUrl: '/images/icons/Long-sleeve-for-Nike-NBA.png', category: 'Nike Life', description: `Men's Long-sleeve Oxford Button-Down Shirt`, price: '100' },
+				{ imgUrl: '/images/icons/El-Chino-Pants-For-Nike-NBA.png', category: 'Nike Life', description: `Men's El Chino Pants`, price: '95' },
+				{ imgUrl: '/images/icons/Nike-dunk-Low-for-Nike-x-NBA.png', category: 'Nike Dunk Low ', description: `Women's shoes`, discountPrice: '102.97', price: '120' },
+				{ imgUrl: '/images/icons/Long-sleeve-for-Nike-NBA.png', category: 'Nike Life', description: `Men's Long-sleeve Oxford Button-Down Shirt`, price: '100' },
+				{ imgUrl: '/images/icons/El-Chino-Pants-For-Nike-NBA.png', category: 'Nike Life', description: `Men's El Chino Pants`, price: '95' },
+				{ imgUrl: '/images/icons/Nike-dunk-Low-for-Nike-x-NBA.png', category: 'Nike Dunk Low ', description: `Women's shoes`, discountPrice: '102.97', price: '120' },
 			]" />
 		</div>
 	</section>
@@ -261,5 +264,71 @@ import Play from 'vue-material-design-icons/Play.vue';
 				<img width="120" src="/images/swoosh-nike-logo.png" alt="">
 			</div>
 		</div>
+	</section>
+
+	<section id="shoesDropListForNikeNBA">
+		<div class="flex flex-col w-full px-20  ">
+			<div :class="isHoveredList ? 'mb-20' : 'mb-0'" @mouseenter="isHoveredList = true"
+				@mouseleave="isHoveredList = false" class="mx-auto relative flex aligh-top  overflow-none  gap-[90px]">
+				<div>
+					<h3 class="font-extrabold mb-8 text-[20px] tracking-wide	 uppercase">Jordan Shoes</h3>
+					<ul class="flex flex-col  items-center">
+						<RouterLink to="Collections">
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan - "Italian Stallion"</li>
+							<li class="text-[16px] mb-4  font-semibold text-gray-400">Air Jordan - "Gotta Be the Shoes"</li>
+							<li class="text-[16px] mb-4  font-semibold text-gray-400">Air Jordan VIII - "Strap In"</li>
+							<li class="text-[16px] mb-4  font-semibold text-gray-400">Air Jordan IX - "Perfect Harmony"</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan X - "The Legacy Continues"
+							</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan X - "The Legacy Continues"
+							</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan X - "The Legacy Continues"
+							</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan X - "The Legacy Continues"
+							</li>
+						</RouterLink>
+					</ul>
+				</div>
+
+				<div>
+					<h3 class="font-extrabold mb-8 text-[20px] tracking-wide	 uppercase">Nike Shoes</h3>
+					<ul class="flex flex-col items-center">
+						<RouterLink to="Collections">
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Cortez Textile</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike AirForce 1'07</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike G.T Cut Cross</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Wearallday</li>
+						</RouterLink>
+					</ul>
+				</div>
+
+				<div class="">
+					<h3 class="font-extrabold mb-8 text-[20px] tracking-wide	 uppercase">Callab Jordan <span
+							class="text-[25px]"> && </span>Nike Shoes</h3>
+					<ul class="flex flex-col items-center">
+						<RouterLink to="Collections">
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Dunk Low Retro</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Dunk Low Retro</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Dunk Low Retro</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Nike Dunk Low Retro</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan 1 Mid</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan 1 Low "White Toe"</li>
+							<li class="text-[16px] mb-4 font-semibold text-gray-400">Air Jordan 6 Retro "Cool Grey"</li>
+							<li class="text-[16px] font-semibold text-gray-400">Air Jordan 2 Retro OG "Chicago"
+							</li>
+						</RouterLink>
+					</ul>
+				</div>
+				<div @mouseenter="isHoveredList = true" @mouseleave="isHoveredList = false"
+					:class="isHoveredList ? 'translate-y-[200px] transition duration-200' : 'transition duration-200'"
+					class="absolute z-20 bottom-[0px] w-full  h-[200px] bg-white">
+					<div @mouseenter="isHoveredList = true" @mouseleave="isHoveredList = false"
+						class="w-full mt-10 border-b">
+					</div>
+
+				</div>
+			</div>
+		</div>
+
 	</section>
 </template>
