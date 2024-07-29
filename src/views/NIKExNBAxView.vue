@@ -1,6 +1,9 @@
 <script setup>
 import { RouterLink } from 'vue-router';
 import { ref } from 'vue'
+
+import CarouselForNikeNBA from '@/components/CarouselForNikeNBA.vue';
+
 import ChevronLeft from 'vue-material-design-icons/ChevronLeft.vue';
 import ChevronUp from 'vue-material-design-icons/ChevronUp.vue';
 import ChevronDown from 'vue-material-design-icons/ChevronDown.vue';
@@ -230,6 +233,23 @@ import Play from 'vue-material-design-icons/Play.vue';
 				</button>
 				</RouterLink>
 			</div>
+		</div>
+	</section>
+
+	<section class="carouselForNikeNBA">
+		<div class="w-[1440px] px-20 mb-20">
+			<CarouselForNikeNBA :data="[
+				{ imgUrl: '/images/icons/Nike-dunk-Low-for-Nike-x-NBA.png', category: 'Nike Dunk Low ', description: `Women's shoes`, discountPrice:'102.97', price:'120' },
+				{ imgUrl: '/images/icons/Long-sleeve-for-Nike-NBA.png', category: 'Nike Life', description: `Men's Long-sleeve Oxford Button-Down Shirt`, price:'100' },
+				{ imgUrl: '/images/icons/El-Chino-Pants-For-Nike-NBA.png', category: 'Nike Life', description: `Men's El Chino Pants`, price:'95' },
+				{ imgUrl: '/images/icons/Nike-dunk-Low-for-Nike-x-NBA.png', category: 'Nike Dunk Low ', description: `Women's shoes`, discountPrice:'102.97', price:'120' },
+				{ imgUrl: '/images/icons/Long-sleeve-for-Nike-NBA.png', category: 'Nike Life', description: `Men's Long-sleeve Oxford Button-Down Shirt`, price:'100' },
+				{ imgUrl: '/images/icons/El-Chino-Pants-For-Nike-NBA.png', category: 'Nike Life', description: `Men's El Chino Pants`, price:'95' },
+				{ imgUrl: '/images/icons/Nike-dunk-Low-for-Nike-x-NBA.png', category: 'Nike Dunk Low ', description: `Women's shoes`, discountPrice:'102.97', price:'120' },
+				{ imgUrl: '/images/icons/Long-sleeve-for-Nike-NBA.png', category: 'Nike Life', description: `Men's Long-sleeve Oxford Button-Down Shirt`, price:'100' },
+				{ imgUrl: '/images/icons/El-Chino-Pants-For-Nike-NBA.png', category: 'Nike Life', description: `Men's El Chino Pants`, price:'95' },
+				{ imgUrl: '/images/icons/Nike-dunk-Low-for-Nike-x-NBA.png', category: 'Nike Dunk Low ', description: `Women's shoes`, discountPrice:'102.97', price:'120' },
+			]" />
 		</div>
 	</section>
 </template>
