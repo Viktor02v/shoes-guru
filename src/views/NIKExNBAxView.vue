@@ -212,4 +212,24 @@ import Play from 'vue-material-design-icons/Play.vue';
 			</div>
 		</div>
 	</section>
+
+	<section id="shopNikeNBA">
+		<div class="w-[1440px] px-20 mb-20">
+			<h2 class="font-normal text-[25px] mb-5">Shop Nike x NBA</h2>
+			<div
+				class="bg-[url('/images/icons/Shop-for-Nike-x-NBA.png')] bg-local mb-10 bg-center w-full relative  h-[700px] ">
+				<div class="flex flex-col mx-auto text-white items-center">
+				</div>
+			</div>
+			<div class="flex flex-col items-center">
+				<h3 class="font-normal text-[30px]">Gear Up </h3>
+				<p class=" font-light mt-2 mb-5">Show your love for the game with our latest Nike x NBA and backetball gear</p>
+				<RouterLink to="/shop">
+				<button type="button" class="px-4 bg-black font-medium text-white rounded-full py-2">
+					<p class="text-[15px]">Shop Nike x NBA</p>
+				</button>
+				</RouterLink>
+			</div>
+		</div>
+	</section>
 </template>
