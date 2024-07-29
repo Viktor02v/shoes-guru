@@ -237,7 +237,7 @@ import Play from 'vue-material-design-icons/Play.vue';
 	</section>
 
 	<section class="carouselForNikeNBA">
-		<div class="w-[1440px] px-20 mb-20">
+		<div class="w-[1440px] px-20 mb-40">
 			<CarouselForNikeNBA :data="[
 				{ imgUrl: '/images/icons/Nike-dunk-Low-for-Nike-x-NBA.png', category: 'Nike Dunk Low ', description: `Women's shoes`, discountPrice:'102.97', price:'120' },
 				{ imgUrl: '/images/icons/Long-sleeve-for-Nike-NBA.png', category: 'Nike Life', description: `Men's Long-sleeve Oxford Button-Down Shirt`, price:'100' },
@@ -250,6 +250,16 @@ import Play from 'vue-material-design-icons/Play.vue';
 				{ imgUrl: '/images/icons/El-Chino-Pants-For-Nike-NBA.png', category: 'Nike Life', description: `Men's El Chino Pants`, price:'95' },
 				{ imgUrl: '/images/icons/Nike-dunk-Low-for-Nike-x-NBA.png', category: 'Nike Dunk Low ', description: `Women's shoes`, discountPrice:'102.97', price:'120' },
 			]" />
+		</div>
+	</section>
+
+	<section id="bannerForNikeNBA">
+		<div class="w-[1440px] px-20 mb-40">
+			<div class="flex justify-center items-center">
+				<img width="180" src="/images/Logo-NBA.png" alt="">
+				<div class="w-[2px] rounded-full bg-[#013597] h-[70px] bg-black mr-10"></div>
+				<img width="120" src="/images/swoosh-nike-logo.png" alt="">
+			</div>
 		</div>
 	</section>
 </template>
