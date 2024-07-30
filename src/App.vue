@@ -31,9 +31,10 @@ window.addEventListener("scroll", function () {
 </script>
 
 <template>
-	<div class="flex flex-col h-full my-auto ">
-		<nav :class="scrolling ? '-translate-y-[74px] transition  duration-200' : 'transition  duration-100'" id="TopNav"
-			@mouseenter="isHover = true" @mouseleave="isHover = false">
+	<div class="flex flex-col h-screen  ">
+		<nav
+			:class="scrolling ? '-translate-y-[74px] transition  duration-600' : 'transition  duration-600'"
+			id="TopNav" @mouseenter="isHover = true" @mouseleave="isHover = false">
 			<div class="relative z-40 flex items-center justify-between w-[100%] h-[74px]">
 				<div :class="isHover ? 'bg-[#F1F1F1]  transition easy-in' : 'bg-[#F4F6F6] transition easy-out'"
 					class="fixed bg-[#F4F6F6] flex items-center  w-[100%] h-[74px] justify-between px-20">
@@ -152,7 +153,9 @@ window.addEventListener("scroll", function () {
 								<RouterLink to="/gift-card">
 									<li>Gift Cards</li>
 								</RouterLink>
+								<RouterLink to="/find-a-store">
 								<li>Find a Store</li>
+								</RouterLink>
 								<RouterLink to="/membership">
 									<li>Become a Member</li>
 								</RouterLink>
