@@ -5,6 +5,7 @@ import { RouterLink } from 'vue-router';
 const props = defineProps({
 	item: Object,
 })
+
 </script>
 
 <template>

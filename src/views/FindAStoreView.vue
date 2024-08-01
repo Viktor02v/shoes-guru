@@ -6,6 +6,7 @@ import SearchForFindAStore from '@/components/SearchForFindAStore.vue'
 
 import LocationCardForFindAStore from '@/components/LocationCardForFindAStore.vue'
 
+
 const map = ref(null)
 
 onMounted(() => {
@@ -14,6 +15,8 @@ onMounted(() => {
 		zoom: 15
 	})
 })
+
+
 
 </script>
 
@@ -25,12 +28,12 @@ onMounted(() => {
 				<div class="absolute top-0 left-0 h-full w-[500px] bodrer border-r bg-white">
 					<div class=" mt-10 flex flex-col ">
 						<h2 class="mx-10 font-normal text-[24px] mb-10">Find A Nike Store</h2>
-						<SearchForFindAStore />
+						<SearchForFindAStore  @search="handleSearch" />
 
 						<div class="flex flex-col overflow-scroll h-[350px] border-b w-full">
-							<LocationCardForFindAStore :data="[
+							<LocationCardForFindAStore  :items="[
 								{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
-								{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+								{ name: 'Nike Store Riga Decropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
 								{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
 								{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
 								{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
@@ -55,7 +58,7 @@ onMounted(() => {
 			</div>
 		</section>
 
-		<section id="mainContentForFindAStore">
+		<section id="mapForFindAStore">
 			<div class="h-[350px]">
 				<div class="absolute top-0 bg-white h-full right-0 w-[940px]">
 					<div ref="map" class="w-full h-full">

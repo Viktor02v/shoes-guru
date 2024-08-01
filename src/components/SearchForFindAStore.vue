@@ -4,6 +4,14 @@ import { RouterLink } from 'vue-router';
 import Magnify from 'vue-material-design-icons/Magnify.vue';
 import ChevronDown from 'vue-material-design-icons/ChevronDown.vue';
 
+const emit = defineEmits(['search'])
+
+const search = (e) => {
+	emit('search', e.target.value);
+
+}
+
+
 
 let inputIsHovered = ref(false)
 
@@ -15,7 +23,7 @@ let inputIsHovered = ref(false)
 			<div class="flex  relative items-center   transition   border border-[#000000]  rounded-md "
 				@focus="inputIsHovered = true" @focusout="inputIsHovered = false">
 				<Magnify class="bg-opacity-10 p-2" />
-				<input @focus="inputIsHovered = true" @focusout="inputIsHovered = false" type="text"
+				<input @input="search" @focus="inputIsHovered = true" @focusout="inputIsHovered = false" type="text"
 					:placeholder="inputIsHovered ? '' : 'Search Location'"
 					class="py-4 bg-transparent outline-none font-[300] placeholder-[#BEBEC7] text-black  w-full">
 
