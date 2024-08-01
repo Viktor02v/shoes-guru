@@ -1,19 +1,26 @@
 <script setup>
-import { ref } from 'vue';
+import { ref, onMounted } from 'vue';
 import { RouterLink } from 'vue-router';
 
 import SearchForFindAStore from '@/components/SearchForFindAStore.vue'
 
 import LocationCardForFindAStore from '@/components/LocationCardForFindAStore.vue'
 
+const map = ref(null)
 
+onMounted(() => {
+	new window.google.maps.Map(map.value, {
+		center: { lat: 56.946, lng: 24.105 },
+		zoom: 15
+	})
+})
 
 </script>
 
 <template>
 	<div class="relative px-20 border-b mb-10 w-[1440px]">
 
-		<section id="sideBar">
+		<section id="sideBarForFindAStore">
 			<div class="h-[350px]">
 				<div class="absolute top-0 left-0 h-full w-[500px] bodrer border-r bg-white">
 					<div class=" mt-10 flex flex-col ">
@@ -41,7 +48,7 @@ import LocationCardForFindAStore from '@/components/LocationCardForFindAStore.vu
 						</div>
 
 						<div class="w-full mx-10 mt-5 font-medium underline cursor-pointer">
-View All Stores
+							View All Stores
 						</div>
 					</div>
 				</div>
@@ -51,8 +58,7 @@ View All Stores
 		<section id="mainContentForFindAStore">
 			<div class="h-[350px]">
 				<div class="absolute top-0 bg-white h-full right-0 w-[940px]">
-					<div class="">
-
+					<div ref="map" class="w-full h-full">
 					</div>
 				</div>
 			</div>
