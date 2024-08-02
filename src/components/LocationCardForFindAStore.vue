@@ -5,68 +5,46 @@ import { RouterLink } from 'vue-router';
 import LocationCardItem from '@/components/LocationCardItem.vue';
 
 const items = [
-	{
-		name: 'Store 1',
-		state: 'State 1',
-		city: 'City 1',
-		street: 'Street 1',
-		status: 'Open',
-		closesAt: '18:00'
-	},
-	{
-		name: 'Store 2',
-		state: 'State 2',
-		city: 'City 2',
-		street: 'Street 2',
-		status: 'Open',
-	},
-
-	{
-		name: 'Store 3',
-		state: 'State 3',
-		city: 'City 3',
-		street: 'Street 3',
-		status: 'Open',
-	},
-	{
-		name: 'Store 2',
-		state: 'State 2',
-		city: 'City 2',
-		street: 'Street 2',
-		status: 'Open',
-	},
-	{
-		name: 'Store 2',
-		state: 'State 2',
-		city: 'City 2',
-		street: 'Street 2',
-		status: 'Open',
-	}
-
+	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+	{ name: 'Nike Store Riga Decropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
 ]
 
-// const props = defineProps({
-// 	items: {
-// 		type: Array,
-// 		required: true
-// 	},
+const props = defineProps({
+	// items: {
+	// 	type: Array,
+	// 	required: true
+	// },
 
-// })
-// const { items } = toRefs(props);
+	searchString: {
+		type: String,
+		default: ''
+	}
+})
+const { searchString } = toRefs(props);
 
-const searchFilter = ref('');
 
 const filteredItems = computed(() => {
-	if (searchFilter.value !== '') {
-		return items.filter((item => item.name.includes(searchFilter.value) || item.status.includes(searchFilter.value)))
+	if (searchString.value !== '') {
+		return items.filter((item => item.name.includes(searchString.value) || item.city.includes(searchString.value)))
 	}
+	console.log(searchString.value)
 	return items
+
 })
 
-const handleSearch = (search) => {
-	searchFilter.value = search;
-
-}
 
 </script>
 

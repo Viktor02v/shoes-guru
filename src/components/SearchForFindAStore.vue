@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from 'vue';
+import { cloneVNode, ref } from 'vue';
 import { RouterLink } from 'vue-router';
 import Magnify from 'vue-material-design-icons/Magnify.vue';
 import ChevronDown from 'vue-material-design-icons/ChevronDown.vue';
@@ -8,6 +8,7 @@ const emit = defineEmits(['search'])
 
 const search = (e) => {
 	emit('search', e.target.value);
+	
 
 }
 
