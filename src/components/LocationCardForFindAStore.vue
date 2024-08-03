@@ -6,8 +6,8 @@ import LocationCardItem from '@/components/LocationCardItem.vue';
 
 const items = [
 	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
-	{ name: 'Nike Store Riga Decropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
-	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
+	{ name: 'Jordan Store Zlote Tarasy (Partnered)', state: 'Floor 0, Zlote Tarasy', street: 'ul. Zlote Tarasy', city: 'Warsaw, Poland', status: 'Open', closesAt: '10:00 PM' },
+	{ name: 'Nike Store Riga Akropole (Not Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Closed', closesAt: '9:00 PM' },
 	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
 	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
 	{ name: 'Nike Store Riga Akropole (Partnered)', state: 'Mascavas iela 257', city: 'Riga, Latvia', street: 'LV-109, LV', status: 'Open', closesAt: '9:00 PM' },
@@ -23,27 +23,43 @@ const items = [
 ]
 
 const props = defineProps({
-	// items: {
-	// 	type: Array,
-	// 	required: true
-	// },
-
-	searchString: {
-		type: String,
-		default: ''
-	}
+	filters: {
+		type: Object,
+		required: true,
+		default: () => ({
+			searchString: '',
+			sortBy: '',
+		}),
+	},
 })
-const { searchString } = toRefs(props);
-
+const { filters } = toRefs(props);
 
 const filteredItems = computed(() => {
-	if (searchString.value !== '') {
-		return items.filter((item => item.name.includes(searchString.value) || item.city.includes(searchString.value)))
-	}
-	console.log(searchString.value)
-	return items
+	// Convert search and sort terms to lowercase
+	const searchTerm = filters.value.searchString.toLowerCase();
+	const sortTerm = filters.value.sortBy.toLowerCase();
 
-})
+	// Filter items based on search and sort criteria
+	return items.filter(item => {
+		// Check if the item matches the search term
+		const matchesSearch =
+			item.name.toLowerCase().includes(searchTerm) ||
+			item.city.toLowerCase().includes(searchTerm);
+
+		// If it doesn't match the search term, exclude it
+		if (!matchesSearch) return false;
+
+		// Check if the item matches the sort term
+		if (sortTerm === 'nike') {
+			return item.name.toLowerCase().includes('nike');
+		} else if (sortTerm === 'jordan') {
+			return item.name.toLowerCase().includes('jordan');
+		}
+
+		// If no specific sort term, include the item
+		return true;
+	});
+});
 
 
 </script>
