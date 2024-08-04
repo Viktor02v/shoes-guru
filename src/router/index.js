@@ -6,6 +6,8 @@ import Woman from'../views/WomenView.vue'
 import Membership from'../views/BecomeAMemberView.vue'
 import NIKExNBA from'../views/NIKExNBAxView.vue'
 import Store from'../views/FindAStoreView.vue'
+import NewYork from'../views/NewYorkView.vue'
+import Warsaw from'../views/WarsawView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -44,6 +46,16 @@ const router = createRouter({
       path: '/find-a-store',
       name: 'find-a-store',
       component: Store,
+    },
+	 {
+      path: '/stores/new-york',
+      name: 'new-york',
+      component: NewYork,
+    },
+	 {
+      path: '/stores/warsaw',
+      name: 'warsaw',
+      component: Warsaw,
     },
   ]
 })
